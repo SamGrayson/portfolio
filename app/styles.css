@@ -1,0 +1,530 @@
+/**************************
+VARIABLES
+**************************/
+/**************************
+WEBKITS
+**************************/
+@-webkit-keyframes arrow {
+  0% {
+    bottom: 1%; }
+  50% {
+    bottom: 2.5%; }
+  100% {
+    bottom: 1%; } }
+@keyframes arrow {
+  0% {
+    bottom: 1%; }
+  50% {
+    bottom: 2.5%; }
+  100% {
+    bottom: 1%; } }
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+/**************************
+MIXINS
+**************************/
+/**************************
+SETUP
+**************************/
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%; }
+
+body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: url("media/stardust.png"); }
+
+p, h1, h2, h3, h4, h5, a {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none; }
+
+a {
+  color: #9575CD;
+  font-style: italic;
+  text-decoration: none; }
+
+a:hover {
+  color: #EDE7F6;
+  text-decoration: none; }
+
+/**************************
+LANDING
+**************************/
+#svgLandFallback {
+  height: 600px; }
+
+#githubLand {
+  position: absolute;
+  z-index: 99;
+  right: 25px;
+  top: 15px;
+  color: #EDE7F6;
+  font-size: 30px;
+  opacity: 0;
+  -webkit-animation: fadeIn 1s linear 2.4s;
+  animation: fadeIn 1s linear 2.4s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+  #githubLand:hover {
+    color: white;
+    cursor: pointer; }
+
+.landingWrapper {
+  z-index: 98;
+  width: 100%;
+  height: 100vh;
+  min-height: 800px;
+  background: -webkit-linear-gradient(#673AB7, #9575CD);
+  background: linear-gradient(#673AB7, #9575CD);
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .landingWrapper .arrowDown {
+    position: absolute;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: white;
+    font-size: 35px;
+    bottom: 1%;
+    -webkit-animation: arrow 3s infinite ease-in;
+    animation: arrow 3s infinite ease-in; }
+  .landingWrapper i {
+    opacity: 0;
+    -webkit-animation: fadeIn 1s ease 2.5s;
+    animation: fadeIn 1s ease 2.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; }
+
+.contentWrapper {
+  width: 80%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .contentWrapper object {
+    z-index: 3;
+    height: 80%;
+    width: 80%; }
+
+/**************************
+HEADER NAV
+**************************/
+.header {
+  z-index: 50;
+  background-color: #9575CD;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0; }
+  .header .headerWrapper {
+    width: 100%;
+    height: 50px;
+    max-width: 1400px;
+    margin: 0 auto; }
+  .header .headerLogo {
+    height: 100%;
+    width: 30%;
+    float: left;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: flex-start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .header .headerLogo object {
+      height: 95%;
+      margin-left: 25px; }
+    .header .headerLogo p {
+      margin-left: 10px;
+      color: white;
+      font-size: 20px;
+      font-weight: lighter; }
+  .header .navButtons {
+    width: 60%;
+    float: right;
+    height: 100%;
+    margin-right: 25px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: flex-end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: flex-end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .header .navButtons a {
+      height: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      text-decoration: none; }
+    .header .navButtons button {
+      margin-right: 5px;
+      margin-left: 5px;
+      border-radius: 15px;
+      background-color: white;
+      border: 1px solid #EDE7F6;
+      width: 100px;
+      background-color: rgba(255, 255, 255, 0);
+      color: white;
+      -webkit-transition: all .25s ease;
+      transition: all .25s ease; }
+      .header .navButtons button:hover {
+        background-color: white;
+        border: 1px solid white;
+        color: #9575CD; }
+    .header .navButtons #githubNav {
+      margin-left: 5px;
+      color: #EDE7F6;
+      font-size: 30px; }
+      .header .navButtons #githubNav:hover {
+        color: white;
+        cursor: pointer;
+        text-decoration: none; }
+
+/**************************
+ABOUT PAGE
+**************************/
+.aboutPage {
+  height: 100vh;
+  min-height: 800px;
+  width: 100%;
+  position: absolute;
+  z-index: 3; }
+
+.contentWrap {
+  width: 100%;
+  height: 30%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  /**************************
+  ABOUT
+  **************************/ }
+  .contentWrap .aboutWrapper {
+    width: 90%;
+    height: 100px;
+    padding-top: 125px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .contentWrap .aboutWrapper .hiyaWrap {
+      width: 100%;
+      height: 100px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .contentWrap .aboutWrapper .hiyaWrap .lines {
+        width: 0%;
+        height: 10px;
+        margin-top: 25px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        .contentWrap .aboutWrapper .hiyaWrap .lines object {
+          height: 100%;
+          width: 100%; }
+      .contentWrap .aboutWrapper .hiyaWrap #hiya {
+        margin-left: 11px;
+        margin-right: 9px;
+        opacity: 0;
+        -webkit-transition: all .25s ease;
+        transition: all .25s ease; }
+      .contentWrap .aboutWrapper .hiyaWrap .hiyaAppear {
+        -webkit-animation: fadeIn 1s linear;
+        animation: fadeIn 1s linear;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards; }
+      .contentWrap .aboutWrapper .hiyaWrap h1 {
+        color: white;
+        font-weight: lighter;
+        font-size: 6rem; }
+
+.aboutMeWrap {
+  width: 100%;
+  max-width: 1426px;
+  margin: 0 auto;
+  height: 400px;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .aboutMeWrap .picture {
+    width: 30%;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .aboutMeWrap .picture #profpic {
+      -webkit-transition: all .25s ease;
+      transition: all .25s ease;
+      -webkit-transform: translateX(-4000px);
+      -ms-transform: translateX(-4000px);
+      transform: translateX(-4000px);
+      height: 300px;
+      width: 300px;
+      border-radius: 50%; }
+  .aboutMeWrap .description {
+    width: 30%;
+    height: 100%;
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0); }
+    .aboutMeWrap .description h1 {
+      color: white;
+      margin-bottom: 25px;
+      font-size: 40px; }
+    .aboutMeWrap .description h2 {
+      font-weight: lighter;
+      font-size: 30px; }
+    .aboutMeWrap .description #passionate {
+      color: #7E57C2; }
+    .aboutMeWrap .description #creative {
+      color: #9575CD; }
+    .aboutMeWrap .description #curious {
+      color: #EDE7F6; }
+    .aboutMeWrap .description p {
+      color: white;
+      font-size: 20px; }
+    .aboutMeWrap .description #reachOut {
+      margin-top: 25px; }
+    .aboutMeWrap .description #emailLink {
+      text-align: center;
+      font-size: 20px; }
+
+.continueAnimate {
+  -webkit-animation: arrow 3s infinite ease-in;
+  animation: arrow 3s infinite ease-in;
+  width: 100%;
+  position: fixed;
+  bottom: 10px; }
+  .continueAnimate #continue {
+    opacity: 0;
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .continueAnimate #continue p {
+      color: white;
+      font-size: 20px; }
+    .continueAnimate #continue i {
+      color: white;
+      font-size: 25px; }
+
+.continueAppear {
+  -webkit-animation: fadeIn 1s linear;
+  animation: fadeIn 1s linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+/*# sourceMappingURL=styles.css.map */

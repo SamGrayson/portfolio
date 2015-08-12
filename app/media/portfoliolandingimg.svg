@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 300 400" style="enable-background:new 0 0 300 400;" xml:space="preserve">
+<style type="text/css">
+	<![CDATA[
+	.st0{
+		font-family:'HelveticaNeue-Thin';
+		opacity: 0;
+		-webkit-animation: fadeIn 1.8s linear;
+		        animation: fadeIn 1.8s linear;
+		-webkit-animation-fill-mode: forwards;
+		        animation-fill-mode: forwards;
+	}
+	.st1{
+		fill:#FFFFFF;stroke:none;font-size:24px;
+		opacity: 0;
+		-webkit-animation: fadeIn 1.8s linear;
+		        animation: fadeIn 1.8s linear;
+		-webkit-animation-fill-mode: forwards;
+		        animation-fill-mode: forwards;
+	}
+	.st2{
+		fill:#FFFFFF;stroke:none;font-family:'OpenSans';
+		opacity: 0;
+		-webkit-animation: fadeIn 1.8s linear 1s;
+		        animation: fadeIn 1.8s linear 1s;
+		-webkit-animation-fill-mode: forwards;
+		        animation-fill-mode: forwards;
+	}
+	.st3{
+		fill:#FFFFFF;stroke:none;font-size:9px;
+		opacity: 0;
+		-webkit-animation: fadeIn 1.8s linear;
+		        animation: fadeIn 1.8s linear;
+		-webkit-animation-fill-mode: forwards;
+		        animation-fill-mode: forwards;
+	}
+	.st4{
+	stroke:#FFFFFF;stroke-width:0.5;stroke-miterlimit:10;
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+	-webkit-animation: draw 3s linear 1.8s;
+	        animation: draw 3s linear 1.8s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+	}
+	.st5{
+		fill:#FFFFFF;stroke:none;font-size:6px;
+		opacity: 0;
+		-webkit-animation: fadeIn 1.8s linear 1s;
+		        animation: fadeIn 1.8s linear 1s;
+		-webkit-animation-fill-mode: forwards;
+		        animation-fill-mode: forwards;
+	}
+	.st7{
+		fill:none;stroke:#FFFFFF;stroke-miterlimit:10;
+		stroke-width: 0.5;
+		stroke-dasharray: 2000;
+		stroke-dashoffset: 2000;
+		-webkit-animation: draw 1.8s linear;
+		        animation: draw 1.8s linear;
+		-webkit-animation-fill-mode: forwards;
+		        animation-fill-mode: forwards;
+	}
+	.st6
+	{
+		fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-miterlimit:10;
+		stroke-dasharray: 870;
+		stroke-dashoffset: 870;
+		-webkit-animation: draw 3s linear;
+		        animation: draw 3s linear;
+		-webkit-animation-fill-mode: forwards;
+		        animation-fill-mode: forwards;
+	}
+	@-webkit-keyframes draw {
+		 to {
+			 stroke-dashoffset: 0;
+		 }
+	}
+	@keyframes draw {
+		 to {
+			 stroke-dashoffset: 0;
+		 }
+	}
+	@-webkit-keyframes fadeIn {
+		0% {
+			opactiy: 0;
+		}
+		75% {
+			opacity: 0;
+		}
+ 		100% {
+			opacity: 1;
+		}
+	}
+	@keyframes fadeIn {
+		0% {
+			opactiy: 0;
+		}
+		75% {
+			opacity: 0;
+		}
+ 		100% {
+			opacity: 1;
+		}
+	}
+	]]>
+</style>
+<text transform="matrix(0.9143 0 0 1 74.1911 267.0312)" class="st0 st1">Samuel Grayson</text>
+<text transform="matrix(0.9143 0 0 1 110.553 292.9804)" class="st2 st3">Front End Developer</text>
+<line class="st4" x1="80" y1="297.8" x2="224" y2="297.8"/>
+<text transform="matrix(0.9143 0 0 1 97.7834 308.1484)" class="st2 st3">User Experience Enthusiast</text>
+<text transform="matrix(0.9143 0 0 1 117.7305 352.7773)" id="real" class="st2 st5">keeping it real since 1992</text>
+<polyline class="st6" points="186.7,119.1 149.6,49.3 106.7,130.8 118.9,130.8 149.5,189 175,142.4 149.6,142.4 "/>
+<polyline class="st6" points="111.5,142.4 149.6,212.4 192.5,130.8 180.2,130.8 149.5,72.4 118.9,130.8 "/>
+<rect x="11.9" y="11" class="st7" width="276.2" height="378.1"/>
+<rect x="5" y="4.1" class="st7" width="290" height="391.9"/>
+</svg>
