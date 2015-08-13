@@ -9,6 +9,7 @@ $lightLavender: #9575CD;
 $wt: rgba(255,255,255,0.9);
 $wt2: whitesmoke;
 $steel: rgb(50, 50, 50);
+$gold: #AD8B32;
 
 /**************************
 WEBKITS
@@ -101,6 +102,7 @@ body {
   width: 100%;
   position: relative;
   background: url('media/stardust.png');
+  background-attachment: fixed;
 }
 
 p, h1, h2, h3, h4, h5, a {
@@ -192,6 +194,7 @@ HEADER NAV
   background-color: $lightLavender;
   width: 100%;
   height: 50px;
+  display: none;
   position: fixed;
   top:0;
   .headerWrapper {
@@ -264,16 +267,27 @@ ABOUT PAGE
 
 .aboutPage {
   height: 100vh;
+  max-height: 1000px;
   min-height: 800px;
   width: 100%;
-  position: absolute;
-  z-index: 3;
+}
+
+#aboutGrabber {
+  height: 100%;
+  width: 100%;
 }
 
 .contentWrap {
   width: 100%;
   height: 30%;
+  max-height: 200px;
   margin: 0 auto;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  -webkit-transition: 0.2s ease;
+          transition: 0.2s ease;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -283,7 +297,6 @@ ABOUT PAGE
   -ms-flex-pack: center;
           justify-content: center;
   -webkit-flex-wrap: wrap;-ms-flex-wrap: wrap;flex-wrap: wrap;
-
 
   /**************************
   ABOUT
@@ -309,8 +322,6 @@ ABOUT PAGE
       }
     }
     #hiya {
-      margin-left: 11px;
-      margin-right: 9px;
       opacity: 0;
       @include transition
     }
@@ -334,13 +345,19 @@ ABOUT PAGE
   max-width: 1426px;
   margin: 0 auto;
   height: 400px;
-  @include transition;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: 0.2s ease-in;
+          transition: 0.2s ease-in;
   //transform: scaleY(1);
   @include flexbox(row, center, center);
   -webkit-flex-wrap: wrap;-ms-flex-wrap: wrap;flex-wrap: wrap;
   .picture {
     width: 30%;
     height: 100%;
+    @include transition;
     @include flexbox(column, center, center);
     #profpic {
       @include transition;
@@ -376,7 +393,7 @@ ABOUT PAGE
       color: $lightLavender;
     }
     #curious {
-      color: $whitePurple;
+      color: #B39DDB;
     }
     p {
       color: white;
@@ -419,4 +436,105 @@ ABOUT PAGE
   animation: fadeIn 1s linear;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+
+
+/**************************
+WORK
+**************************/
+
+.workWrap {
+  position: relative;
+  padding-top: 50px;
+  z-index: 40;
+  width: 100%;
+  min-height: 750px;
+  background-color: white;
+  padding-bottom: 25px;
+  background: url('media/subtle_white_feathers.png');
+
+
+  .theGoods {
+    width: 100%;
+    height: 100px;
+    @include flexbox(column, center, center);
+    h1 {
+      color: $gold;
+      font-weight: bold;
+      font-size: 6rem;
+      text-shadow: 1px 1px 1px black;
+    }
+  }
+  .lines {
+    width: 100%;
+    height: 10px;
+    @include flexbox(row, center, center);
+    object {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .individWorkWrap {
+    width: 100%;
+    height: 85%;
+    @include flexbox(row, center, center);
+    -webkit-flex-wrap: wrap;-ms-flex-wrap: wrap;flex-wrap: wrap;
+    .works {
+      margin-left: 25px;
+      margin-right: 25px;
+      margin-top: 25px;
+      width: 300px;
+      height: 500px;
+      @include flexbox(column, center, center);
+      border: 1px solid $steel;
+      box-shadow: 0px 2px 5px 0px $steel;
+      background-color: white;
+      background-attachment: fixed;
+      &:hover img {
+          box-shadow: 0px 0px 20px 1px $gold;
+          border-radius: 10%;
+      }
+      img {
+        margin-top: 25px;
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        @include transition;
+      }
+      img:hover {
+        cursor: pointer;
+      }
+      .description {
+        height: 200px;
+        width: 90%;
+        margin-top: 25px;
+        h2 {
+          font-weight: bold;
+          height: 60px;
+          text-align: center;
+          @include flexbox(column, center, center);
+          color: $gold;
+        }
+        p {
+          margin-top: 10px;
+          color: $steel;
+        }
+        a:hover {
+          color: $gold;
+        }
+      }
+      .link {
+        height: 50px;
+        width: 90%;
+        @include flexbox(row, center, center);
+        a {
+          margin: 10px;
+          font-style: normal;
+        }
+        a:hover {
+          color: $gold;
+        }
+      }
+    }
+  }
 }
