@@ -29,14 +29,15 @@
     <div class="headerWrapper">
       <div class="headerLogo">
         <object data="media/portfoliologo.svg" type="image/svg+xml">
-          <img id="svgHeaderFallback" src="media/portfoliologo.png" />
+          <!-- <img id="svgHeaderFallback" src="media/portfoliologo.png" /> -->
         </object>
         <p>Sam Grayson</p>
       </div>
       <div class="navButtons">
         <a href=""><button>about</button></a>
-        <a href=""><button>contact</button></a>
         <a href=""><button>work</button></a>
+        <a href=""><button>resume</button></a>
+        <a href=""><button>contact</button></a>
         <a href="https://github.com/SamGrayson" target="_blank" id="githubNav"><i class="fa fa-github"></i></a>
       </div>
     </div>
@@ -99,15 +100,15 @@
 
   <div class="workWrap">
     <div class="theGoods">
-      <h1> The Goods </h1>
+      <h1> THE GOODS </h1>
     </div>
-    <div class="lines">
-      <object data="media/line.svg" type="image/svg+xml">
+    <div class="lineWork">
+      <object data="media/lineWork.svg" type="image/svg+xml">
         <!-- <img id="svgLandFallback" src="media/portfoliolandingimg.png" /> -->
       </object>
     </div>
     <div class="individWorkWrap">
-      <div class="works work1">
+      <div id="work1" class="works">
         <a target="_blank" href="http://samgrayson.github.io/StarCart/#/"><img src="media/starcart.png" alt="">
         </a>
         <div class="description">
@@ -119,7 +120,7 @@
           <a target="_blank" href="http://samgrayson.github.io/StarCart/#/">live page</a>|<a target="_blank" href="https://github.com/SamGrayson/StarCart">view code</a>
         </div>
       </div>
-      <div class="works work2">
+      <div id="work2" class="works work2">
         <a target="_blank" href="https://elefgee.herokuapp.com/#/"><img src="media/elefgee.png" alt="">
         </a>
         <div class="description">
@@ -131,7 +132,7 @@
           <a target="_blank" href="https://elefgee.herokuapp.com/#/">live page</a>|<a target="_blank" href="https://github.com/Elefgee/elefgee">view code</a>
         </div>
       </div>
-      <div class="works work3">
+      <div id="work3" class="works">
         <a target="_blank" href="http://geopin.herokuapp.com/#/login"><img src="media/geopin.png" alt="">
         </a>
         <div class="description">
@@ -143,7 +144,7 @@
           <a target="_blank" href="http://geopin.herokuapp.com/#/login">live page</a>|<a target="_blank" href="https://github.com/MapReview/MapReview">view code</a>
         </div>
       </div>
-      <div class="works work4">
+      <div id="work4" class="works">
         <a target="_blank" href="http://samgrayson.github.io/Weekend1_Peralta/"><img src="media/peralta.png" alt="">
         </a>
         <div class="description">
@@ -156,7 +157,109 @@
         </div>
       </div>
     </div>
+    <a id="moreWork" href="">view more of my work here</a>
   </div>
+
+<!-- RESUME -->
+
+<div class="resumeWrap">
+  <div class="resume">
+  <h1 id="resumeTitle">RESUME</h1>
+  <div class="lines">
+    <object data="media/lineResume.svg" type="image/svg+xml">
+      <!-- <img id="svgLandFallback" src="media/portfoliolandingimg.png" /> -->
+    </object>
+  </div>
+  <div class="fullResume"><a href="">view full resume</a></div>
+</div>
+  <div class="skillsWrap">
+    <div class="skillsTitle"><h2>SKILLS</h2></div>
+    <div class="skill">
+      <h3>JAVASCRIPT</h3>
+      <p>Javascript</p>
+      <p>Angular.js</p>
+      <p>Bootstrap</p>
+      <p>NODE.js</p>
+      <p>ScrollMagic.js</p>
+      <p>Underscore.js</p>
+      <p>JQuery</p>
+    </div>
+    <div class="skill">
+      <h3>DEV TOOLS</h3>
+      <p>ATOM</p>
+      <p>Bootstrap</p>
+      <p>NPM/Bower</p>
+      <p>Passport</p>
+      <p>O-Auth/OpenID</p>
+      <p>GIT/GitHub</p>
+      <p>Heroku</p>
+    </div>
+    <div class="skill">
+      <h3>HTML/CSS</h3>
+      <p>SASS</p>
+      <p>CSS3</p>
+      <p>HTML5</p>
+      <p>Responsive Design</p>
+      <p>FontAwesome</p>
+    </div>
+    <div class="skill">
+      <h3>NON-TECH</h3>
+      <p>Leadership</p>
+      <p>Public Speaking</p>
+      <p>Organization</p>
+      <p>Team Work</p>
+      <p>Problem Solving</p>
+      <p>The gift of gab</p>
+    </div>
+  </div>
+  <div class="experienceWrap">
+    <div class="experienceTitle"><h2>EXPERIENCE</h2></div>
+    <div class="experience">
+      <h3>THE IRON YARD</h3>
+      <p class="titleTag">Front End Engineering Grad</p>
+      <div class="bullets">
+        <li>Completed an exstensive, comprehensive coding school teaching all aspects of font end engineering and web development.</li>
+      </div>
+    </div>
+    <div class="experience">
+      <h3>HEAVY DUTY</h3>
+      <p class="titleTag">Marketing Intern</p>
+      <div class="bullets">
+        <li>Organized and maintained perpective client lists.</li>
+        <li>Marketing research on potential leads and trends in the field.</li>
+      </div>
+    </div>
+    <div class="experience">
+      <h3>AIRSERV</h3>
+      <p class="titleTag">Wheelchair Assistant</p>
+      <div class="bullets">
+        <li>Assisted passengers to their destinations at Hartsfield airport in Atlanta. Attending to their needs, questions, and concerns.</li>
+        <li>Learned amazing values from stories of love, work, and life.</li>
+      </div>
+    </div>
+    <div class="experience">
+      <h3>PARTNERS II PIZZA</h3>
+      <p class="titleTag">Restaurant Renaissance Man</p>
+      <div class="bullets">
+        <li>Learned the importance of hardwork at the early age of fifteen and throughout four years of highschool.</li>
+        <li>Began as a Dish Boy and progressed to Buss Boy, Cashier, Server and Cook.</li>
+        <li>Learned to make a rockin pie.</li>
+      </div>
+    </div>
+  </div>
+  <div class="educationWrap">
+    <div class="educationTitle"><h2>EDUCATION</h2></div>
+    <div class="education">
+      <h3>BA MARKETING, 2014 <b><i>| MERCER UNIVERSITY</b></i></h3>
+      <p><b></b></p>
+      <p><b>NCAA D1 Lacrosse Student Athelete</b></p>
+      <h3 id="ironYard">THE IRON YARD <b><i>| CHARLESTON, SC</b></i></h3>
+      <p><b></b></p>
+      <p><b>Front End Engineering Cohort</b></p>
+    </div>
+  </div>
+</div>
+
 
 
 

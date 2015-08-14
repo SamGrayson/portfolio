@@ -100,12 +100,11 @@ html {
 body {
   height: 100%;
   width: 100%;
-  position: relative;
   background: url('media/stardust.png');
   background-attachment: fixed;
 }
 
-p, h1, h2, h3, h4, h5, a {
+p, h1, h2, h3, h4, h5, a, li {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
@@ -190,7 +189,7 @@ HEADER NAV
 **************************/
 
 .header {
-  z-index: 50;
+  z-index: 80;
   background-color: $lightLavender;
   width: 100%;
   height: 50px;
@@ -326,8 +325,8 @@ ABOUT PAGE
       @include transition
     }
     .hiyaAppear {
-      -webkit-animation: fadeIn 1s linear;
-      animation: fadeIn 1s linear;
+      -webkit-animation: fadeIn .5s linear;
+      animation: fadeIn .5s linear;
       -webkit-animation-fill-mode: forwards;
               animation-fill-mode: forwards;
     }
@@ -453,10 +452,11 @@ WORK
   padding-bottom: 25px;
   background: url('media/subtle_white_feathers.png');
 
-
   .theGoods {
     width: 100%;
     height: 100px;
+    opacity: 0;
+    @include transition;
     @include flexbox(column, center, center);
     h1 {
       color: $gold;
@@ -465,9 +465,11 @@ WORK
       text-shadow: 1px 1px 1px black;
     }
   }
-  .lines {
-    width: 100%;
+  .lineWork {
+    width: 0%;
+    margin: 0 auto;
     height: 10px;
+    -webkit-transition: 1s ease;transition: 1s ease;
     @include flexbox(row, center, center);
     object {
       height: 100%;
@@ -477,14 +479,23 @@ WORK
   .individWorkWrap {
     width: 100%;
     height: 85%;
+    opacity: 1;
+    margin-bottom: 50px;
+    @include transition;
     @include flexbox(row, center, center);
     -webkit-flex-wrap: wrap;-ms-flex-wrap: wrap;flex-wrap: wrap;
     .works {
+      position: relative;
+      z-index: 40;
       margin-left: 25px;
       margin-right: 25px;
       margin-top: 25px;
       width: 300px;
       height: 500px;
+      -webkit-transform: translateY(1000px);
+          -ms-transform: translateY(1000px);
+              transform: translateY(1000px);
+      @include transition;
       @include flexbox(column, center, center);
       border: 1px solid $steel;
       box-shadow: 0px 2px 5px 0px $steel;
@@ -534,6 +545,199 @@ WORK
         a:hover {
           color: $gold;
         }
+      }
+    }
+  }
+  #moreWork {
+    width: 100%;
+    height: 25px;
+    text-align: center;
+    font-style: normal;
+    @include flexbox(row, center, center);
+  }
+  #moreWork:hover {
+    color: $deepPurple;
+    text-decoration: underline;
+  }
+}
+
+/**************************
+RESUME
+**************************/
+
+.resumeWrap {
+  position: relative;
+  padding-top: 25px;
+  z-index: 60;
+  width: 100%;
+  min-height: 750px;
+  @include flexbox(column, flex-start, center);
+  .resume {
+    width: 0%;
+    height: 200px;
+    opacity: 0;
+    @include transition;
+    @include flexbox(column, center, center);
+    background-color: $lightLavender;
+    #resumeTitle {
+      color: white;
+      font-weight: lighter;
+      font-size: 6rem;
+      font-weight: bold;
+    }
+    .lines {
+      width: 0%;
+      height: 10px;
+      margin-top: 25px;
+      @include flexbox(row, center, center);
+      object {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  .fullResume {
+    width: 100%;
+    height: 25px;
+    padding-top: 25px;
+    @include flexbox(row, center, center);
+    a {
+      color: $whitePurple;
+      font-style: normal;
+    }
+    a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+  .skillsWrap {
+    width: 100%;
+    max-width: 1426px;
+    margin-top: 25px;
+    @include flexbox(row, center, center);
+    -webkit-flex-wrap: wrap;  -ms-flex-wrap: wrap;  flex-wrap: wrap;
+    .skillsTitle {
+      width: 100%;
+      @include flexbox(row, center, center);
+      h2 {
+        color: white;
+        font-weight: bold;
+        font-size: 4rem;
+      }
+    }
+    .skill {
+      width: 300px;
+      height: 300px;
+      margin: 25px;
+      border: 1px solid $whitePurple;
+      @include flexbox(column, flex-start, center);
+      &:hover {
+        box-shadow: 0px 0px 10px 2px $lightLavender;
+      }
+      h3 {
+        margin-bottom: 10px;
+        color: white;
+        font-weight: bold;
+        margin: 25px;
+      }
+      p {
+        color: white;
+        margin-top: 5px;
+      }
+    }
+  }
+  .experienceWrap {
+    width: 100%;
+    max-width: 1426px;
+    margin-top: 25px;
+    @include flexbox(row, center, center);
+    -webkit-flex-wrap: wrap;  -ms-flex-wrap: wrap;  flex-wrap: wrap;
+    .experienceTitle {
+      width: 100%;
+      @include flexbox(row, center, center);
+      h2 {
+        color: white;
+        font-weight: bold;
+        font-size: 4rem;
+      }
+    }
+    .experience {
+      width: 300px;
+      height: 300px;
+      margin: 25px;
+      border: 1px solid $whitePurple;
+      @include flexbox(column, flex-start, center);
+      &:hover {
+        box-shadow: 0px 0px 10px 2px $lightLavender;
+      }
+      h3 {
+        margin-bottom: 10px;
+        color: white;
+        font-weight: bold;
+        margin: 25px 25px 10px 25px;
+      }
+      .titleTag {
+        margin: 0;
+        color: #B39DDB;
+        font-style: italic;
+      }
+      p {
+        color: white;
+        margin-top: 5px;
+      }
+      .bullets {
+        width: 80%;
+        li {
+          color: white;
+          position: relative;
+          margin: 10px;
+          list-style-position: outside;
+          text-indent: -1em;
+        }
+      }
+    }
+  }
+  .educationWrap {
+    width: 100%;
+    max-width: 1426px;
+    margin-top: 25px;
+    @include flexbox(row, center, center);
+    -webkit-flex-wrap: wrap;  -ms-flex-wrap: wrap;  flex-wrap: wrap;
+    .educationTitle {
+      width: 100%;
+      @include flexbox(row, center, center);
+      h2 {
+        color: white;
+        font-weight: bold;
+        font-size: 4rem;
+      }
+    }
+    .education {
+      width: 80%;
+      max-width: 800px;
+      height: 200px;
+      margin: 25px;
+      border: 1px solid $whitePurple;
+      @include flexbox(column, center, center);
+      &:hover {
+        box-shadow: 0px 0px 10px 2px $lightLavender;
+      }
+      h3 {
+        margin-bottom: 5px;
+        color: white;
+        font-weight: bold;
+        margin: 0 25px 10px 25px;
+      }
+      .titleTag {
+        margin: 0;
+        color: #B39DDB;
+        font-style: italic;
+      }
+      p {
+        color: white;
+      }
+      #ironYard {
+        margin-top: 15px;
       }
     }
   }
