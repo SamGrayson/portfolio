@@ -43,11 +43,10 @@ html {
 body {
   height: 100%;
   width: 100%;
-  position: relative;
   background: url("media/stardust.png");
   background-attachment: fixed; }
 
-p, h1, h2, h3, h4, h5, a {
+p, h1, h2, h3, h4, h5, a, li {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
@@ -170,7 +169,7 @@ LANDING
 HEADER NAV
 **************************/
 .header {
-  z-index: 50;
+  z-index: 80;
   background-color: #9575CD;
   width: 100%;
   height: 50px;
@@ -385,8 +384,8 @@ ABOUT PAGE
         -webkit-transition: all .25s ease;
         transition: all .25s ease; }
       .contentWrap .aboutWrapper .hiyaWrap .hiyaAppear {
-        -webkit-animation: fadeIn 1s linear;
-        animation: fadeIn 1s linear;
+        -webkit-animation: fadeIn .5s linear;
+        animation: fadeIn .5s linear;
         -webkit-animation-fill-mode: forwards;
         animation-fill-mode: forwards; }
       .contentWrap .aboutWrapper .hiyaWrap h1 {
@@ -558,6 +557,9 @@ WORK
   .workWrap .theGoods {
     width: 100%;
     height: 100px;
+    opacity: 0;
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -580,9 +582,12 @@ WORK
       font-weight: bold;
       font-size: 6rem;
       text-shadow: 1px 1px 1px black; }
-  .workWrap .lines {
-    width: 100%;
+  .workWrap .lineWork {
+    width: 0%;
+    margin: 0 auto;
     height: 10px;
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -600,12 +605,16 @@ WORK
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
-    .workWrap .lines object {
+    .workWrap .lineWork object {
       height: 100%;
       width: 100%; }
   .workWrap .individWorkWrap {
     width: 100%;
     height: 85%;
+    opacity: 1;
+    margin-bottom: 50px;
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -627,11 +636,18 @@ WORK
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
     .workWrap .individWorkWrap .works {
+      position: relative;
+      z-index: 40;
       margin-left: 25px;
       margin-right: 25px;
       margin-top: 25px;
       width: 300px;
       height: 500px;
+      -webkit-transform: translateY(1000px);
+      -ms-transform: translateY(1000px);
+      transform: translateY(1000px);
+      -webkit-transition: all .25s ease;
+      transition: all .25s ease;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -721,5 +737,392 @@ WORK
           font-style: normal; }
         .workWrap .individWorkWrap .works .link a:hover {
           color: #AD8B32; }
+  .workWrap #moreWork {
+    width: 100%;
+    height: 25px;
+    text-align: center;
+    font-style: normal;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .workWrap #moreWork:hover {
+    color: #673AB7;
+    text-decoration: underline; }
+
+/**************************
+RESUME
+**************************/
+.resumeWrap {
+  position: relative;
+  padding-top: 25px;
+  z-index: 60;
+  width: 100%;
+  min-height: 750px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: flex-start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .resumeWrap .resume {
+    width: 0%;
+    height: 200px;
+    opacity: 0;
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #9575CD; }
+    .resumeWrap .resume #resumeTitle {
+      color: white;
+      font-weight: lighter;
+      font-size: 6rem;
+      font-weight: bold; }
+    .resumeWrap .resume .lines {
+      width: 0%;
+      height: 10px;
+      margin-top: 25px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .resumeWrap .resume .lines object {
+        height: 100%;
+        width: 100%; }
+  .resumeWrap .fullResume {
+    width: 100%;
+    height: 25px;
+    padding-top: 25px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .resumeWrap .fullResume a {
+      color: #EDE7F6;
+      font-style: normal; }
+    .resumeWrap .fullResume a:hover {
+      color: white;
+      text-decoration: underline; }
+  .resumeWrap .skillsWrap {
+    width: 100%;
+    max-width: 1426px;
+    margin-top: 25px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .resumeWrap .skillsWrap .skillsTitle {
+      width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .resumeWrap .skillsWrap .skillsTitle h2 {
+        color: white;
+        font-weight: bold;
+        font-size: 4rem; }
+    .resumeWrap .skillsWrap .skill {
+      width: 300px;
+      height: 300px;
+      margin: 25px;
+      border: 1px solid #EDE7F6;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: flex-start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: flex-start;
+      justify-content: flex-start;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .resumeWrap .skillsWrap .skill:hover {
+        box-shadow: 0px 0px 10px 2px #9575CD; }
+      .resumeWrap .skillsWrap .skill h3 {
+        margin-bottom: 10px;
+        color: white;
+        font-weight: bold;
+        margin: 25px; }
+      .resumeWrap .skillsWrap .skill p {
+        color: white;
+        margin-top: 5px; }
+  .resumeWrap .experienceWrap {
+    width: 100%;
+    max-width: 1426px;
+    margin-top: 25px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .resumeWrap .experienceWrap .experienceTitle {
+      width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .resumeWrap .experienceWrap .experienceTitle h2 {
+        color: white;
+        font-weight: bold;
+        font-size: 4rem; }
+    .resumeWrap .experienceWrap .experience {
+      width: 300px;
+      height: 300px;
+      margin: 25px;
+      border: 1px solid #EDE7F6;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: flex-start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: flex-start;
+      justify-content: flex-start;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .resumeWrap .experienceWrap .experience:hover {
+        box-shadow: 0px 0px 10px 2px #9575CD; }
+      .resumeWrap .experienceWrap .experience h3 {
+        margin-bottom: 10px;
+        color: white;
+        font-weight: bold;
+        margin: 25px 25px 10px 25px; }
+      .resumeWrap .experienceWrap .experience .titleTag {
+        margin: 0;
+        color: #B39DDB;
+        font-style: italic; }
+      .resumeWrap .experienceWrap .experience p {
+        color: white;
+        margin-top: 5px; }
+      .resumeWrap .experienceWrap .experience .bullets {
+        width: 80%; }
+        .resumeWrap .experienceWrap .experience .bullets li {
+          color: white;
+          position: relative;
+          margin: 10px;
+          list-style-position: outside;
+          text-indent: -1em; }
+  .resumeWrap .educationWrap {
+    width: 100%;
+    max-width: 1426px;
+    margin-top: 25px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .resumeWrap .educationWrap .educationTitle {
+      width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .resumeWrap .educationWrap .educationTitle h2 {
+        color: white;
+        font-weight: bold;
+        font-size: 4rem; }
+    .resumeWrap .educationWrap .education {
+      width: 80%;
+      max-width: 800px;
+      height: 200px;
+      margin: 25px;
+      border: 1px solid #EDE7F6;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .resumeWrap .educationWrap .education:hover {
+        box-shadow: 0px 0px 10px 2px #9575CD; }
+      .resumeWrap .educationWrap .education h3 {
+        margin-bottom: 5px;
+        color: white;
+        font-weight: bold;
+        margin: 0 25px 10px 25px; }
+      .resumeWrap .educationWrap .education .titleTag {
+        margin: 0;
+        color: #B39DDB;
+        font-style: italic; }
+      .resumeWrap .educationWrap .education p {
+        color: white; }
+      .resumeWrap .educationWrap .education #ironYard {
+        margin-top: 15px; }
 
 /*# sourceMappingURL=styles.css.map */
