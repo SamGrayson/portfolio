@@ -4,7 +4,8 @@
 	 viewBox="0 0 150 250" style="enable-background:new 0 0 150 250;" xml:space="preserve">
 <style type="text/css">
 	<![CDATA[
-	.st0{fill:none;stroke:#FFFFFF;stroke-width:9;stroke-miterlimit:10;}
+	.st0{fill:none;stroke-width:9;stroke-miterlimit:10;}
+
 	svg:hover {
 		stroke-dasharray: 870;
 		stroke-dashoffset: 870;
@@ -26,6 +27,6 @@
 	}
 	]]>
 </style>
-<polyline class="st0" points="131.2,109.3 75,16 10,125 28.6,125 74.9,202.7 113.4,140.4 75,140.4 "/>
-<polyline class="st0" points="17.4,140.4 75,234 140,125 121.4,125 74.8,46.9 28.6,125 "/>
+<polyline class="st0" stroke='#FFFFFF' points="131.2,109.3 75,16 10,125 28.6,125 74.9,202.7 113.4,140.4 75,140.4 "/>
+<polyline class="st0" stroke='#FFFFFF' points="17.4,140.4 75,234 140,125 121.4,125 74.8,46.9 28.6,125 "/>
 </svg>

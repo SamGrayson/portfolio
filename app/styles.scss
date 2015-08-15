@@ -82,6 +82,11 @@ MIXINS
 }
 
 @mixin transition {
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+@mixin transitionHover {
   -webkit-transition: all .25s ease;
   transition: all .25s ease;
 }
@@ -101,7 +106,6 @@ body {
   height: 100%;
   width: 100%;
   background: url('media/stardust.png');
-  background-attachment: fixed;
 }
 
 p, h1, h2, h3, h4, h5, a, li {
@@ -120,6 +124,7 @@ a {
 a:hover {
   color: $whitePurple;
   text-decoration: none;
+  @include transitionHover;
 }
 
 /**************************
@@ -189,12 +194,13 @@ HEADER NAV
 **************************/
 
 .header {
-  z-index: 80;
+  z-index: 97;
   background-color: $lightLavender;
   width: 100%;
   height: 50px;
   display: none;
   position: fixed;
+  @include transition;
   top:0;
   .headerWrapper {
     width: 100%;
@@ -322,7 +328,7 @@ ABOUT PAGE
     }
     #hiya {
       opacity: 0;
-      @include transition
+      @include transition;
     }
     .hiyaAppear {
       -webkit-animation: fadeIn .5s linear;
@@ -332,7 +338,7 @@ ABOUT PAGE
     }
       h1 {
         color: white;
-        font-weight: lighter;
+        font-weight: bold;
         font-size: 6rem;
       }
     }
@@ -354,8 +360,7 @@ ABOUT PAGE
   @include flexbox(row, center, center);
   -webkit-flex-wrap: wrap;-ms-flex-wrap: wrap;flex-wrap: wrap;
   .picture {
-    width: 30%;
-    height: 100%;
+    width: 400px;
     @include transition;
     @include flexbox(column, center, center);
     #profpic {
@@ -369,7 +374,7 @@ ABOUT PAGE
     }
   }
   .description {
-    width: 30%;
+    width: 400px;
     height: 100%;
     @include transition;
     @include flexbox(column, center, flex-start);
@@ -502,6 +507,7 @@ WORK
       background-color: white;
       background-attachment: fixed;
       &:hover img {
+        @include transitionHover;
           box-shadow: 0px 0px 20px 1px $gold;
           border-radius: 10%;
       }
@@ -514,6 +520,7 @@ WORK
       }
       img:hover {
         cursor: pointer;
+        @include transitionHover;
       }
       .description {
         height: 200px;
@@ -532,6 +539,7 @@ WORK
         }
         a:hover {
           color: $gold;
+          @include transitionHover;
         }
       }
       .link {
@@ -544,6 +552,7 @@ WORK
         }
         a:hover {
           color: $gold;
+          @include transitionHover;
         }
       }
     }
@@ -551,11 +560,13 @@ WORK
   #moreWork {
     width: 100%;
     height: 25px;
+    margin-top: 25px;
     text-align: center;
     font-style: normal;
     @include flexbox(row, center, center);
   }
   #moreWork:hover {
+    @include transitionHover;
     color: $deepPurple;
     text-decoration: underline;
   }
@@ -566,12 +577,13 @@ RESUME
 **************************/
 
 .resumeWrap {
-  position: relative;
   padding-top: 25px;
   z-index: 60;
   width: 100%;
   min-height: 750px;
   @include flexbox(column, flex-start, center);
+  background: url('media/stardust.png');
+  position: relative;
   .resume {
     width: 0%;
     height: 200px;
@@ -606,6 +618,7 @@ RESUME
       font-style: normal;
     }
     a:hover {
+      @include transitionHover;
       color: white;
       text-decoration: underline;
     }
@@ -618,6 +631,9 @@ RESUME
     -webkit-flex-wrap: wrap;  -ms-flex-wrap: wrap;  flex-wrap: wrap;
     .skillsTitle {
       width: 100%;
+      opacity: 0;
+      @include transition;
+      margin-top: 15px;
       @include flexbox(row, center, center);
       h2 {
         color: white;
@@ -625,13 +641,23 @@ RESUME
         font-size: 4rem;
       }
     }
+    .skill1, .skill2, .skill3, .skill4 {
+      -webkit-transform: translateY(1000px);
+          -ms-transform: translateY(1000px);
+              transform: translateY(1000px);
+      @include transition;
+    }
     .skill {
+      position: relative;
+      z-index: 80;
       width: 300px;
       height: 300px;
       margin: 25px;
       border: 1px solid $whitePurple;
+      @include transition;
       @include flexbox(column, flex-start, center);
       &:hover {
+        @include transitionHover;
         box-shadow: 0px 0px 10px 2px $lightLavender;
       }
       h3 {
@@ -654,6 +680,9 @@ RESUME
     -webkit-flex-wrap: wrap;  -ms-flex-wrap: wrap;  flex-wrap: wrap;
     .experienceTitle {
       width: 100%;
+      opacity: 0;
+      margin-top: 15px;
+      @include transition;
       @include flexbox(row, center, center);
       h2 {
         color: white;
@@ -661,13 +690,24 @@ RESUME
         font-size: 4rem;
       }
     }
+
+    .exp1, .exp2, .exp3, .exp4 {
+      -webkit-transform: translateY(1000px);
+          -ms-transform: translateY(1000px);
+              transform: translateY(1000px);
+    }
+
     .experience {
+      position: relative;
+      z-index: 80;
+      @include transition;
       width: 300px;
       height: 300px;
       margin: 25px;
       border: 1px solid $whitePurple;
       @include flexbox(column, flex-start, center);
       &:hover {
+        @include transitionHover;
         box-shadow: 0px 0px 10px 2px $lightLavender;
       }
       h3 {
@@ -704,7 +744,10 @@ RESUME
     @include flexbox(row, center, center);
     -webkit-flex-wrap: wrap;  -ms-flex-wrap: wrap;  flex-wrap: wrap;
     .educationTitle {
+      margin-top: 15px;
+      @include transition;
       width: 100%;
+      opacity: 0;
       @include flexbox(row, center, center);
       h2 {
         color: white;
@@ -714,12 +757,19 @@ RESUME
     }
     .education {
       width: 80%;
+      position: relative;
+      z-index: 80;
+      -webkit-transform: translateY(1000px);
+          -ms-transform: translateY(1000px);
+              transform: translateY(1000px);
+      @include transition;
       max-width: 800px;
       height: 200px;
       margin: 25px;
       border: 1px solid $whitePurple;
       @include flexbox(column, center, center);
       &:hover {
+        @include transitionHover;
         box-shadow: 0px 0px 10px 2px $lightLavender;
       }
       h3 {
@@ -742,3 +792,119 @@ RESUME
     }
   }
 }
+
+/**************************
+CONTACT
+**************************/
+
+.headerWhite {
+  z-index: 97;
+  background-color: white;
+  width: 100%;
+  height: 50px;
+  display: none;
+  position: fixed;
+  @include transition;
+  top:0;
+  .headerWrapper {
+    width: 100%;
+    height: 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .headerLogo {
+    height: 100%;
+    width: 30%;
+    float: left;
+    @include flexbox(row, flex-start, center);
+    object {
+      height: 95%;
+      margin-left: 25px;
+      .st0 {
+        stroke: $deepPurple;
+      }
+    }
+    p {
+      margin-left: 10px;
+      color: $deepPurple;
+      font-size: 20px;
+      font-weight: lighter;
+    }
+  }
+  .navButtons {
+    width: 60%;
+    float: right;
+    height: 100%;
+    margin-right: 25px;
+    @include flexbox(row, flex-end, center);
+    a {
+      height: 100%;
+      @include flexbox(row, center, center);
+      text-decoration: none;
+    }
+    button {
+      margin-right: 5px;
+      margin-left: 5px;
+      border-radius: 15px;
+      background-color: white;
+      border: 1px solid $deepPurple;
+      width: 100px;
+      background-color: rgba(255, 255, 255, 0);
+      color: $deepPurple;
+      @include transition;
+      &:hover {
+        background-color: $lightLavender;
+        border: 1px solid $lightLavender;
+        color: white;
+      }
+    }
+    #githubNav {
+      margin-left: 5px;
+      color: $deepPurple;
+      font-size: 30px;
+      &:hover {
+        color: $lightLavender;
+        cursor: pointer;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.contactWrap {
+  position: relative;
+  z-index:81;
+  width: 100%;
+  height: 100vh;
+  min-height: 800px;
+  @include flexbox(column, center, center);
+  background: -webkit-linear-gradient($deepPurple, #9575CD);
+  background: linear-gradient($deepPurple,#9575CD);
+  #contactTitle {
+    font-weight: bold;
+    font-size: 10rem;
+    color: #B39DDB;
+    text-shadow: 13px 0px 0px white;
+    margin: 25px;
+  }
+  .contacts {
+    color: white;
+    font-size: 6rem;
+    @include flexbox(column, center, center);
+    h2 {
+      margin: 10px;
+    }
+  }
+  .links {
+    color: white;
+    font-size: 5rem;
+    margin: 5px;
+    @include flexbox(row, center, center);
+  }
+}
+
+/**************************
+IMPORTS
+**************************/
+
+@import 'queries'

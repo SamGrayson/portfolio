@@ -43,8 +43,7 @@ html {
 body {
   height: 100%;
   width: 100%;
-  background: url("media/stardust.png");
-  background-attachment: fixed; }
+  background: url("media/stardust.png"); }
 
 p, h1, h2, h3, h4, h5, a, li {
   font-family: 'Open Sans', sans-serif;
@@ -59,7 +58,9 @@ a {
 
 a:hover {
   color: #EDE7F6;
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease; }
 
 /**************************
 LANDING
@@ -169,12 +170,14 @@ LANDING
 HEADER NAV
 **************************/
 .header {
-  z-index: 80;
+  z-index: 97;
   background-color: #9575CD;
   width: 100%;
   height: 50px;
   display: none;
   position: fixed;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
   top: 0; }
   .header .headerWrapper {
     width: 100%;
@@ -261,8 +264,8 @@ HEADER NAV
       width: 100px;
       background-color: rgba(255, 255, 255, 0);
       color: white;
-      -webkit-transition: all .25s ease;
-      transition: all .25s ease; }
+      -webkit-transition: all .5s ease;
+      transition: all .5s ease; }
       .header .navButtons button:hover {
         background-color: white;
         border: 1px solid white;
@@ -381,8 +384,8 @@ ABOUT PAGE
           width: 100%; }
       .contentWrap .aboutWrapper .hiyaWrap #hiya {
         opacity: 0;
-        -webkit-transition: all .25s ease;
-        transition: all .25s ease; }
+        -webkit-transition: all .5s ease;
+        transition: all .5s ease; }
       .contentWrap .aboutWrapper .hiyaWrap .hiyaAppear {
         -webkit-animation: fadeIn .5s linear;
         animation: fadeIn .5s linear;
@@ -390,7 +393,7 @@ ABOUT PAGE
         animation-fill-mode: forwards; }
       .contentWrap .aboutWrapper .hiyaWrap h1 {
         color: white;
-        font-weight: lighter;
+        font-weight: bold;
         font-size: 6rem; }
 
 .aboutMeWrap {
@@ -425,10 +428,9 @@ ABOUT PAGE
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
   .aboutMeWrap .picture {
-    width: 30%;
-    height: 100%;
-    -webkit-transition: all .25s ease;
-    transition: all .25s ease;
+    width: 400px;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -447,8 +449,8 @@ ABOUT PAGE
     -ms-flex-align: center;
     align-items: center; }
     .aboutMeWrap .picture #profpic {
-      -webkit-transition: all .25s ease;
-      transition: all .25s ease;
+      -webkit-transition: all .5s ease;
+      transition: all .5s ease;
       -webkit-transform: translateX(-4000px);
       -ms-transform: translateX(-4000px);
       transform: translateX(-4000px);
@@ -456,10 +458,10 @@ ABOUT PAGE
       width: 300px;
       border-radius: 50%; }
   .aboutMeWrap .description {
-    width: 30%;
+    width: 400px;
     height: 100%;
-    -webkit-transition: all .25s ease;
-    transition: all .25s ease;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -510,8 +512,8 @@ ABOUT PAGE
   bottom: 10px; }
   .continueAnimate #continue {
     opacity: 0;
-    -webkit-transition: all .25s ease;
-    transition: all .25s ease;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -558,8 +560,8 @@ WORK
     width: 100%;
     height: 100px;
     opacity: 0;
-    -webkit-transition: all .25s ease;
-    transition: all .25s ease;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -613,8 +615,8 @@ WORK
     height: 85%;
     opacity: 1;
     margin-bottom: 50px;
-    -webkit-transition: all .25s ease;
-    transition: all .25s ease;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -646,8 +648,8 @@ WORK
       -webkit-transform: translateY(1000px);
       -ms-transform: translateY(1000px);
       transform: translateY(1000px);
-      -webkit-transition: all .25s ease;
-      transition: all .25s ease;
+      -webkit-transition: all .5s ease;
+      transition: all .5s ease;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -670,6 +672,8 @@ WORK
       background-color: white;
       background-attachment: fixed; }
       .workWrap .individWorkWrap .works:hover img {
+        -webkit-transition: all .25s ease;
+        transition: all .25s ease;
         box-shadow: 0px 0px 20px 1px #AD8B32;
         border-radius: 10%; }
       .workWrap .individWorkWrap .works img {
@@ -677,10 +681,12 @@ WORK
         border-radius: 50%;
         height: 200px;
         width: 200px;
+        -webkit-transition: all .5s ease;
+        transition: all .5s ease; }
+      .workWrap .individWorkWrap .works img:hover {
+        cursor: pointer;
         -webkit-transition: all .25s ease;
         transition: all .25s ease; }
-      .workWrap .individWorkWrap .works img:hover {
-        cursor: pointer; }
       .workWrap .individWorkWrap .works .description {
         height: 200px;
         width: 90%;
@@ -711,7 +717,9 @@ WORK
           margin-top: 10px;
           color: #323232; }
         .workWrap .individWorkWrap .works .description a:hover {
-          color: #AD8B32; }
+          color: #AD8B32;
+          -webkit-transition: all .25s ease;
+          transition: all .25s ease; }
       .workWrap .individWorkWrap .works .link {
         height: 50px;
         width: 90%;
@@ -736,10 +744,13 @@ WORK
           margin: 10px;
           font-style: normal; }
         .workWrap .individWorkWrap .works .link a:hover {
-          color: #AD8B32; }
+          color: #AD8B32;
+          -webkit-transition: all .25s ease;
+          transition: all .25s ease; }
   .workWrap #moreWork {
     width: 100%;
     height: 25px;
+    margin-top: 25px;
     text-align: center;
     font-style: normal;
     display: -webkit-box;
@@ -760,6 +771,8 @@ WORK
     -ms-flex-align: center;
     align-items: center; }
   .workWrap #moreWork:hover {
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
     color: #673AB7;
     text-decoration: underline; }
 
@@ -767,7 +780,6 @@ WORK
 RESUME
 **************************/
 .resumeWrap {
-  position: relative;
   padding-top: 25px;
   z-index: 60;
   width: 100%;
@@ -788,13 +800,15 @@ RESUME
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  background: url("media/stardust.png");
+  position: relative; }
   .resumeWrap .resume {
     width: 0%;
     height: 200px;
     opacity: 0;
-    -webkit-transition: all .25s ease;
-    transition: all .25s ease;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -867,6 +881,8 @@ RESUME
       color: #EDE7F6;
       font-style: normal; }
     .resumeWrap .fullResume a:hover {
+      -webkit-transition: all .25s ease;
+      transition: all .25s ease;
       color: white;
       text-decoration: underline; }
   .resumeWrap .skillsWrap {
@@ -895,6 +911,10 @@ RESUME
     flex-wrap: wrap; }
     .resumeWrap .skillsWrap .skillsTitle {
       width: 100%;
+      opacity: 0;
+      -webkit-transition: all .5s ease;
+      transition: all .5s ease;
+      margin-top: 15px;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -916,11 +936,21 @@ RESUME
         color: white;
         font-weight: bold;
         font-size: 4rem; }
+    .resumeWrap .skillsWrap .skill1, .resumeWrap .skillsWrap .skill2, .resumeWrap .skillsWrap .skill3, .resumeWrap .skillsWrap .skill4 {
+      -webkit-transform: translateY(1000px);
+      -ms-transform: translateY(1000px);
+      transform: translateY(1000px);
+      -webkit-transition: all .5s ease;
+      transition: all .5s ease; }
     .resumeWrap .skillsWrap .skill {
+      position: relative;
+      z-index: 80;
       width: 300px;
       height: 300px;
       margin: 25px;
       border: 1px solid #EDE7F6;
+      -webkit-transition: all .5s ease;
+      transition: all .5s ease;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -939,6 +969,8 @@ RESUME
       -ms-flex-align: center;
       align-items: center; }
       .resumeWrap .skillsWrap .skill:hover {
+        -webkit-transition: all .25s ease;
+        transition: all .25s ease;
         box-shadow: 0px 0px 10px 2px #9575CD; }
       .resumeWrap .skillsWrap .skill h3 {
         margin-bottom: 10px;
@@ -974,6 +1006,10 @@ RESUME
     flex-wrap: wrap; }
     .resumeWrap .experienceWrap .experienceTitle {
       width: 100%;
+      opacity: 0;
+      margin-top: 15px;
+      -webkit-transition: all .5s ease;
+      transition: all .5s ease;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -995,7 +1031,15 @@ RESUME
         color: white;
         font-weight: bold;
         font-size: 4rem; }
+    .resumeWrap .experienceWrap .exp1, .resumeWrap .experienceWrap .exp2, .resumeWrap .experienceWrap .exp3, .resumeWrap .experienceWrap .exp4 {
+      -webkit-transform: translateY(1000px);
+      -ms-transform: translateY(1000px);
+      transform: translateY(1000px); }
     .resumeWrap .experienceWrap .experience {
+      position: relative;
+      z-index: 80;
+      -webkit-transition: all .5s ease;
+      transition: all .5s ease;
       width: 300px;
       height: 300px;
       margin: 25px;
@@ -1018,6 +1062,8 @@ RESUME
       -ms-flex-align: center;
       align-items: center; }
       .resumeWrap .experienceWrap .experience:hover {
+        -webkit-transition: all .25s ease;
+        transition: all .25s ease;
         box-shadow: 0px 0px 10px 2px #9575CD; }
       .resumeWrap .experienceWrap .experience h3 {
         margin-bottom: 10px;
@@ -1064,7 +1110,11 @@ RESUME
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
     .resumeWrap .educationWrap .educationTitle {
+      margin-top: 15px;
+      -webkit-transition: all .5s ease;
+      transition: all .5s ease;
       width: 100%;
+      opacity: 0;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -1088,6 +1138,13 @@ RESUME
         font-size: 4rem; }
     .resumeWrap .educationWrap .education {
       width: 80%;
+      position: relative;
+      z-index: 80;
+      -webkit-transform: translateY(1000px);
+      -ms-transform: translateY(1000px);
+      transform: translateY(1000px);
+      -webkit-transition: all .5s ease;
+      transition: all .5s ease;
       max-width: 800px;
       height: 200px;
       margin: 25px;
@@ -1110,6 +1167,8 @@ RESUME
       -ms-flex-align: center;
       align-items: center; }
       .resumeWrap .educationWrap .education:hover {
+        -webkit-transition: all .25s ease;
+        transition: all .25s ease;
         box-shadow: 0px 0px 10px 2px #9575CD; }
       .resumeWrap .educationWrap .education h3 {
         margin-bottom: 5px;
@@ -1124,5 +1183,219 @@ RESUME
         color: white; }
       .resumeWrap .educationWrap .education #ironYard {
         margin-top: 15px; }
+
+/**************************
+CONTACT
+**************************/
+.headerWhite {
+  z-index: 97;
+  background-color: white;
+  width: 100%;
+  height: 50px;
+  display: none;
+  position: fixed;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  top: 0; }
+  .headerWhite .headerWrapper {
+    width: 100%;
+    height: 50px;
+    max-width: 1400px;
+    margin: 0 auto; }
+  .headerWhite .headerLogo {
+    height: 100%;
+    width: 30%;
+    float: left;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: flex-start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .headerWhite .headerLogo object {
+      height: 95%;
+      margin-left: 25px; }
+      .headerWhite .headerLogo object .st0 {
+        stroke: #673AB7; }
+    .headerWhite .headerLogo p {
+      margin-left: 10px;
+      color: #673AB7;
+      font-size: 20px;
+      font-weight: lighter; }
+  .headerWhite .navButtons {
+    width: 60%;
+    float: right;
+    height: 100%;
+    margin-right: 25px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: flex-end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: flex-end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .headerWhite .navButtons a {
+      height: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      text-decoration: none; }
+    .headerWhite .navButtons button {
+      margin-right: 5px;
+      margin-left: 5px;
+      border-radius: 15px;
+      background-color: white;
+      border: 1px solid #673AB7;
+      width: 100px;
+      background-color: rgba(255, 255, 255, 0);
+      color: #673AB7;
+      -webkit-transition: all .5s ease;
+      transition: all .5s ease; }
+      .headerWhite .navButtons button:hover {
+        background-color: #9575CD;
+        border: 1px solid #9575CD;
+        color: white; }
+    .headerWhite .navButtons #githubNav {
+      margin-left: 5px;
+      color: #673AB7;
+      font-size: 30px; }
+      .headerWhite .navButtons #githubNav:hover {
+        color: #9575CD;
+        cursor: pointer;
+        text-decoration: none; }
+
+.contactWrap {
+  position: relative;
+  z-index: 81;
+  width: 100%;
+  height: 100vh;
+  min-height: 800px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: -webkit-linear-gradient(#673AB7, #9575CD);
+  background: linear-gradient(#673AB7, #9575CD); }
+  .contactWrap #contactTitle {
+    font-weight: bold;
+    font-size: 10rem;
+    color: #B39DDB;
+    text-shadow: 13px 0px 0px white;
+    margin: 25px; }
+  .contactWrap .contacts {
+    color: white;
+    font-size: 6rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .contactWrap .contacts h2 {
+      margin: 10px; }
+  .contactWrap .links {
+    color: white;
+    font-size: 5rem;
+    margin: 5px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+
+/**************************
+IMPORTS
+**************************/
+@media screen and (max-width: 1400px) {
+  .workWrap .individWorkWrap {
+    max-width: 800px;
+    height: 85%;
+    margin: 0 auto; }
+  .workWrap .theGoods {
+    max-width: 800px;
+    margin: 0 auto; }
+  .workWrap .lineWork {
+    max-width: 800px;
+    margin: 0 auto; }
+
+  .resumeWrap .skillsWrap {
+    max-width: 800px;
+    margin: 0 auto; }
+  .resumeWrap .experienceWrap {
+    max-width: 800px;
+    margin: 0 auto; }
+  .resumeWrap .educationWrap {
+    margin: 0 auto; } }
 
 /*# sourceMappingURL=styles.css.map */

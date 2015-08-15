@@ -64,42 +64,46 @@ $(document).ready(function() {
     }
 
     function description (event) {
-      if ($('.description').css('transform') === "matrix(1, 0, 0, 0, 0, 0)") {
         $('.description').css('transform', 'scaleY(1)');
-      } else {
-        $('.description').css('transform', 'scaleY(0)');
-      }
+    }
+
+    function descriptionLeave (event) {
+      $('.description').css('transform', 'scaleY(0)');
     }
 
     function picture (event) {
-      if ($('#profpic').css('transform') === 'matrix(1, 0, 0, 1, -4000, 0)') {
         $('#profpic').css('transform', 'translateX(0)');
-      } else {
-        $('#profpic').css('transform', 'translateX(-4000px)');
-      }
     }
 
+    function pictureLeave (event) {
+        $('#profpic').css('transform', 'translateX(-4000px)');
+    }
+
+
     function away (event) {
-      if ($('.contentWrap').css('opacity')==='1') {
         // $('.contentWrap').css('transform', 'translateY(400px)');
         // $('.aboutMeWrap').css('transform', 'translateY(400px)');
         $('.contentWrap').css('opacity', '0');
         $('.aboutMeWrap').css('opacity', '0');
         $('.theGoods').css('opacity', '1');
-      } else {
+    }
+
+    function awayLeave (event) {
         // $('.contentWrap').css('transform', 'translateY(0)');
         // $('.aboutMeWrap').css('transform', 'translateY(0)');
         $('.aboutMeWrap').css('opacity', '1');
         $('.contentWrap').css('opacity', '1');
         $('.theGoods').css('opacity', '0');
-      }
     }
 
     containerScene.on("enter", hiya);
     containerScene.on("leave", hiyaLeave);
-    aboutScene.on("enter leave", description);
-    profPicScene.on("enter leave", picture);
-    aboutAway.on("enter leave", away);
+    aboutScene.on("enter", description);
+    aboutScene.on("leave", descriptionLeave);
+    profPicScene.on("enter", picture);
+    profPicScene.on("leave", pictureLeave);
+    aboutAway.on("enter", away);
+    aboutAway.on("leave", awayLeave);
 
     /////////////////////
 
@@ -113,23 +117,24 @@ $(document).ready(function() {
       .addTo(controller);
 
     function slideUp (event) {
-      if($('#work1').css('transform') === 'matrix(1, 0, 0, 1, 0, 1000)') {
         console.log($('#work1').css('transform'))
         $('.lineWork').css('width', '100%');
         $('#work1').css('transform','translateY(0)');
         setTimeout(function() {$('#work2').css('transform','translateY(0)')},100);
         setTimeout(function() {$('#work3').css('transform','translateY(0)')},200);
         setTimeout(function() {$('#work4').css('transform','translateY(0)')},300);
-      } else {
+    }
+
+    function slideUpLeave (event) {
         $('.lineWork').css('width', '0%');
         $('#work1').css('transform','translateY(1000px)');
         setTimeout(function() {$('#work2').css('transform','translateY(1000px)')},100);
         setTimeout(function() {$('#work3').css('transform','translateY(1000px)')},200);
         setTimeout(function() {$('#work4').css('transform','translateY(1000px)')},300);
-      }
     }
 
-    workEnter.on("enter leave", slideUp)
+    workEnter.on("enter", slideUp)
+    workEnter.on("leave", slideUpLeave)
 
     //////////////////////
 
@@ -142,35 +147,130 @@ $(document).ready(function() {
       .addIndicators()
       .addTo(controller);
 
-      var skillsIn = new ScrollMagic.Scene({
-          triggerElement: '.skillsTitle',
-          duration: 0,
-          offset: 50
-        })
-        .addIndicators()
-        .addTo(controller);
+    var skillsIn = new ScrollMagic.Scene({
+        triggerElement: '#resumeLines',
+        duration: 0
+      })
+      .addIndicators()
+      .addTo(controller);
+
+    var experienceIn = new ScrollMagic.Scene({
+        triggerElement: '.skillsWrap',
+        duration: 0,
+        offset: 200
+      })
+      .addIndicators()
+      .addTo(controller);
+
+    var educationIn = new ScrollMagic.Scene({
+        triggerElement: '.experienceWrap',
+        duration: 0,
+        offset: 200
+      })
+      .addIndicators()
+      .addTo(controller);
 
     function resumeStart (event) {
-      if($('.individWorkWrap').css('opacity') === '1') {
         $('.theGoods').css('opacity', '0');
         $('.individWorkWrap').css('opacity', '0');
         $('.lineWork').css('opacity', '0');
         $('#moreWork').css('opacity', '0');
         $('.resume').css('width', '100%');
         $('.resume').css('opacity', '1');
-      } else {
+    }
+
+    function resumeStartLeave (event) {
         $('.theGoods').css('opacity', '1');
         $('.individWorkWrap').css('opacity', '1');
         $('.lineWork').css('opacity', '1');
         $('#moreWork').css('opacity', '1');
         $('.resume').css('width', '0%');
         $('.resume').css('opacity', '0');
-      }
     }
 
-    resumeEnter.on('enter leave', resumeStart);
+    function skills(event) {
+        $('.skillsTitle').css('opacity', '1');
+        $('.skill1').css('transform', 'translateY(0)');
+        setTimeout(function() {$('.skill2').css('transform', 'translateY(0)')},100);
+        setTimeout(function() {$('.skill3').css('transform', 'translateY(0)')},200);
+        setTimeout(function() {$('.skill4').css('transform', 'translateY(0)')},300);
+    }
+    function skillsLeave(event) {
+        $('.skillsTitle').css('opacity', '0');
+        $('.skill1').css('transform', 'translateY(1000px)');
+        setTimeout(function() {$('.skill2').css('transform', 'translateY(1000px)')},100);
+        setTimeout(function() {$('.skill3').css('transform', 'translateY(1000px)')},200);
+        setTimeout(function() {$('.skill4').css('transform', 'translateY(1000px)')},300);
+    }
 
-  });
+    function experience(event) {
+        $('.experienceTitle').css('opacity', '1');
+        $('.exp1').css('transform', 'translateY(0)');
+        setTimeout(function() {$('.exp2').css('transform', 'translateY(0)')},100);
+        setTimeout(function() {$('.exp3').css('transform', 'translateY(0)')},200);
+        setTimeout(function() {$('.exp4').css('transform', 'translateY(0)')},300);
+    }
+    function experienceLeave(event) {
+        $('.experienceTitle').css('opacity', '0');
+        $('.exp1').css('transform', 'translateY(1000px)');
+        setTimeout(function() {$('.exp2').css('transform', 'translateY(1000px)')},100);
+        setTimeout(function() {$('.exp3').css('transform', 'translateY(1000px)')},200);
+        setTimeout(function() {$('.exp4').css('transform', 'translateY(1000px)')},300);
+    }
+
+    function education(event) {
+        $('.educationTitle').css('opacity', '1');
+        $('.education').css('transform', 'translateY(0)');
+    }
+    function educationLeave(event) {
+        $('.educationTitle').css('opacity', '0');
+        $('.education').css('transform', 'translateY(1000px)');
+    }
+
+
+
+    resumeEnter.on('enter', resumeStart);
+    resumeEnter.on('leave', resumeStartLeave);
+    skillsIn.on('enter', skills);
+    skillsIn.on('leave', skillsLeave);
+    experienceIn.on('enter', experience);
+    experienceIn.on('leave', experienceLeave);
+    educationIn.on('enter', education);
+    educationIn.on('leave', educationLeave);
+
+    //////////////////////
+
+    /////// Contact ///////
+
+    var contactEnter = new ScrollMagic.Scene({
+        triggerElement: '.contactWrap',
+        duration: 600
+      })
+      .addIndicators()
+      .addTo(controller);
+
+      function header(event) {
+        var a = document.getElementById('portfolioLogo');
+        var portfolioLogo = a.contentDocument;
+        var lines = portfolioLogo.getElementsByClassName('st0')
+
+        var headerOffset = $('.header').offset();
+        var contactOffset = $('.contactWrap').offset();
+
+        if (headerOffset.top >= contactOffset.top) {
+          $("#headerToggle").addClass("headerWhite");
+          lines[0].setAttribute('stroke', '#673AB7');
+          lines[1].setAttribute('stroke', '#673AB7');
+        } else {
+          $("#headerToggle").removeClass("headerWhite");
+          lines[0].setAttribute('stroke', 'white');
+          lines[1].setAttribute('stroke', 'white');
+        }
+      }
+
+      contactEnter.on('progress', header);
+
+    });
 
   /**************************
   OTHER SHTUFF
