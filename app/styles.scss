@@ -94,6 +94,10 @@ MIXINS
 /**************************
 SETUP
 **************************/
+.dropdown-backdrop {
+    position: static;
+}
+
 @-ms-viewport {
   orientation: portrait;
 }
