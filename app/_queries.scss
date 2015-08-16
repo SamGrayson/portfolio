@@ -155,5 +155,17 @@
 .contactWrap {
     min-height: 600px;
 }
+.contactWrap .contacts {
+  width: 80%;
+}
 
+}
+
+@media screen and (max-width: 380px) {
+  .workWrap .individWorkWrap .works .description h2 {
+    margin-top: 15px;
+  }
+  .contactWrap .contacts {
+    width: 100%;
+  }
 }
