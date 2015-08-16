@@ -1,4 +1,8 @@
 @media screen and (max-width: 1400px) {
+  .landingWrapper {
+    min-height: 600px;
+  }
+
   .workWrap {
     .individWorkWrap {
     max-width: 800px;
@@ -60,6 +64,9 @@
    }
  }
 .header {
+  .dropDownWrap {
+    display: flex;
+  }
   .headerLogo {
     width: 70%;
     object {

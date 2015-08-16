@@ -201,7 +201,8 @@ HEADER NAV
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    display: none; }
     .header .dropDownWrap .dropdown-menu {
       width: 0;
       font-size: 25px;
@@ -1274,7 +1275,8 @@ CONTACT
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    display: none; }
     .headerWhite .dropDownWrap .dropdown-menu {
       width: 0;
       font-size: 25px;
@@ -1464,8 +1466,7 @@ CONTACT
     -ms-flex-align: flex-start;
     align-items: flex-start;
     width: 400px;
-    height: 100px;
-    margin-bottom: 25px;
+    height: 150px;
     opacity: 0; }
     .contactWrap .contacts .icon {
       margin-right: 25px; }
@@ -1534,7 +1535,7 @@ CONTACT
       -ms-flex-align: center;
       align-items: center; }
   .contactWrap .linkWrap {
-    padding-top: 50px;
+    padding-top: 25px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1703,6 +1704,9 @@ CONTACT
 IMPORTS
 **************************/
 @media screen and (max-width: 1400px) {
+  .landingWrapper {
+    min-height: 600px; }
+
   .workWrap .individWorkWrap {
     max-width: 800px;
     height: 85%;
@@ -1741,6 +1745,8 @@ IMPORTS
   .headerWhite .navButtons {
     display: none; }
 
+  .header .dropDownWrap {
+    display: flex; }
   .header .headerLogo {
     width: 70%; }
     .header .headerLogo object {

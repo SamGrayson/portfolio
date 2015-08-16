@@ -211,6 +211,7 @@ HEADER NAV
     height: 50px;
     margin-right:25px;
     @include flexbox(row,center,center);
+    display: none;
     .dropdown-menu {
       width: 0;
       font-size: 25px;
@@ -843,6 +844,7 @@ CONTACT
     height: 50px;
     margin-right:25px;
     @include flexbox(row,center,center);
+    display: none;
     .dropdown-menu {
       width: 0;
       font-size: 25px;
@@ -949,8 +951,7 @@ CONTACT
     @include transition;
     @include flexbox(column, flex-start, flex-start);
     width: 400px;
-    height: 100px;
-    margin-bottom: 25px;
+    height: 150px;
     opacity: 0;
     .icon {
       margin-right: 25px;
@@ -977,7 +978,7 @@ CONTACT
     }
   }
   .linkWrap {
-    padding-top: 50px;
+    padding-top: 25px;
     @include flexbox(column, center, center);
     opacity: 0;
     @include transition;
