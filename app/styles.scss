@@ -960,6 +960,13 @@ CONTACT
     width: 400px;
     height: 150px;
     opacity: 0;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    a:hover {
+      color: white;
+    }
     .icon {
       margin-right: 25px;
     }

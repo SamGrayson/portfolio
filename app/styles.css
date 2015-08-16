@@ -1472,6 +1472,11 @@ CONTACT
     width: 400px;
     height: 150px;
     opacity: 0; }
+    .contactWrap .contacts a {
+      color: white;
+      text-decoration: none; }
+    .contactWrap .contacts a:hover {
+      color: white; }
     .contactWrap .contacts .icon {
       margin-right: 25px; }
     .contactWrap .contacts #mail {
@@ -1767,7 +1772,7 @@ IMPORTS
       width: 100%; }
 
   #githubLand {
-    right: 5px; }
+    display: none; }
 
   .aboutMeWrap .description {
     width: 400px;
@@ -1840,7 +1845,17 @@ IMPORTS
   .workWrap .individWorkWrap .works .description h2 {
     margin-top: 15px; }
 
+  .workWrap .individWorkWrap .works {
+    height: 550px; }
+
+  .workWrap .individWorkWrap .works .description {
+    margin-top: 5px; }
+
   .contactWrap .contacts {
-    width: 100%; } }
+    width: 100%; }
+
+  .landingWrapper {
+    min-height: 525px;
+    height: 40vh; } }
 
 /*# sourceMappingURL=styles.css.map */

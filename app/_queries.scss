@@ -86,7 +86,7 @@
     }
   }
   #githubLand {
-    right: 5px;
+    display: none;
   }
   .aboutMeWrap {
 
@@ -165,7 +165,17 @@
   .workWrap .individWorkWrap .works .description h2 {
     margin-top: 15px;
   }
+  .workWrap .individWorkWrap .works {
+    height: 550px;
+  }
+  .workWrap .individWorkWrap .works .description {
+    margin-top: 5px;
+}
   .contactWrap .contacts {
     width: 100%;
+  }
+  .landingWrapper {
+    min-height: 525px;
+    height: 40vh;
   }
 }
