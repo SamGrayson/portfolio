@@ -94,6 +94,12 @@ MIXINS
 /**************************
 SETUP
 **************************/
+@-ms-viewport {
+  orientation: portrait;
+}
+@-o-viewport {
+  orientation: portrait;
+}
 @viewport {
   orientation: portrait;
 }
