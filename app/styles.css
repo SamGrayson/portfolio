@@ -147,6 +147,12 @@ LANDING
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards; }
 
+#mobileSvg {
+  display: none; }
+
+#compSvg {
+  display: block; }
+
 .contentWrapper {
   width: 80%;
   height: 100%;
@@ -1856,6 +1862,12 @@ IMPORTS
 
   .landingWrapper {
     min-height: 525px;
-    height: 40vh; } }
+    height: 40vh; }
+
+  #compSvg {
+    display: none; }
+
+  #mobileSvg {
+    display: block; } }
 
 /*# sourceMappingURL=styles.css.map */
