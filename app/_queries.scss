@@ -29,3 +29,123 @@
     }
 }
 }
+
+@media screen and (max-width: 800px) {
+  .aboutPage {
+    min-height: 600px;
+    height: 600px;
+  }
+  .aboutMeWrap {
+    .picture {
+      display: none;
+    }
+    .description {
+      padding-left: 40px;
+    }
+  }
+  .continueAnimate {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+.header {
+  .navButtons {
+    display: none;
+  }
+}
+.headerWhite {
+   .navButtons {
+    display: none;
+   }
+ }
+.header {
+  .headerLogo {
+    width: 70%;
+    object {
+      width: 25px;
+      height: 50px
+    }
+  }
+}
+}
+
+@media screen and (max-width: 450px) {
+  .contentWrapper {
+    width: 100%;
+    object {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  #githubLand {
+    right: 5px;
+  }
+  .aboutMeWrap {
+
+    .description {
+      width: 400px;
+      height: 100%;
+      @include transition;
+      @include flexbox(column, center, flex-start);
+      -webkit-transform: scaleY(0);
+          -ms-transform: scaleY(0);
+              transform: scaleY(0);
+      h1 {
+        color: white;
+        margin-bottom: 25px;
+        font-size: 36  px;
+      }
+      h2 {
+        font-weight: lighter;
+        font-size: 26px;
+      }
+      #passionate {
+        color: $lavender;
+      }
+      #creative {
+        color: $lightLavender;
+      }
+      #curious {
+        color: #B39DDB;
+      }
+      p {
+        color: white;
+        font-size: 16px;
+      }
+      #reachOut {
+        margin-top: 25px;
+      }
+      #emailLink {
+        text-align: center;
+        font-size: 16px;
+      }
+    }
+  }
+
+.workWrap {
+    .theGoods {
+        h1 {
+          color: #AD8B32;
+          font-weight: bold;
+          font-size: 5rem;
+    }
+  }
+}
+
+.resumeWrap .educationWrap .education h3 {
+    font-size: 20px;
+}
+
+.contactWrap .contacts {
+    width: 100%;
+}
+
+.contactWrap .contacts h2 {
+    font-size: 1.5rem;
+}
+.contactWrap {
+    min-height: 600px;
+}
+
+}

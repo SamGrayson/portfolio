@@ -14,7 +14,7 @@ $(document).ready(function() {
       })
       .setClassToggle("#hiya", "hiyaAppear")
       .setPin('')
-      .addIndicators()
+      // .addIndicators()
       .addTo(controller);
 
     /////// ABOUT ///////
@@ -24,7 +24,7 @@ $(document).ready(function() {
         duration: 0,
         offset: 100
       })
-      .addIndicators()
+      // .addIndicators()
       .addTo(controller);
 
     var profPicScene = new ScrollMagic.Scene({
@@ -32,7 +32,7 @@ $(document).ready(function() {
         duration: 0,
         offset: 100
       })
-      .addIndicators()
+      // .addIndicators()
       .addTo(controller);
 
     var continueScene = new ScrollMagic.Scene({
@@ -41,7 +41,7 @@ $(document).ready(function() {
         offset: 100
       })
       .setClassToggle("#continue", "continueAppear")
-      .addIndicators()
+      // .addIndicators()
       .addTo(controller);
 
     var aboutAway = new ScrollMagic.Scene({
@@ -49,7 +49,7 @@ $(document).ready(function() {
         duration: 0,
         offset: -50
     })
-      .addIndicators()
+      // .addIndicators()
       .addTo(controller);
 
 
@@ -83,27 +83,27 @@ $(document).ready(function() {
     function away (event) {
         // $('.contentWrap').css('transform', 'translateY(400px)');
         // $('.aboutMeWrap').css('transform', 'translateY(400px)');
-        $('.contentWrap').css('opacity', '0');
-        $('.aboutMeWrap').css('opacity', '0');
+        // $('.contentWrap').css('opacity', '0');
+        // $('.aboutMeWrap').css('opacity', '0');
         $('.theGoods').css('opacity', '1');
     }
 
     function awayLeave (event) {
         // $('.contentWrap').css('transform', 'translateY(0)');
         // $('.aboutMeWrap').css('transform', 'translateY(0)');
-        $('.aboutMeWrap').css('opacity', '1');
-        $('.contentWrap').css('opacity', '1');
+        // $('.aboutMeWrap').css('opacity', '1');
+        // $('.contentWrap').css('opacity', '1');
         $('.theGoods').css('opacity', '0');
     }
 
     containerScene.on("enter", hiya);
-    containerScene.on("leave", hiyaLeave);
+    // containerScene.on("leave", hiyaLeave);
     aboutScene.on("enter", description);
-    aboutScene.on("leave", descriptionLeave);
+    // aboutScene.on("leave", descriptionLeave);
     profPicScene.on("enter", picture);
-    profPicScene.on("leave", pictureLeave);
+    // profPicScene.on("leave", pictureLeave);
     aboutAway.on("enter", away);
-    aboutAway.on("leave", awayLeave);
+    // aboutAway.on("leave", awayLeave);
 
     /////////////////////
 
@@ -113,7 +113,7 @@ $(document).ready(function() {
         triggerElement: '.workWrap',
         duration: 0
       })
-      .addIndicators()
+      // .addIndicators()
       .addTo(controller);
 
     function slideUp (event) {
@@ -134,7 +134,7 @@ $(document).ready(function() {
     }
 
     workEnter.on("enter", slideUp)
-    workEnter.on("leave", slideUpLeave)
+    // workEnter.on("leave", slideUpLeave)
 
     //////////////////////
 
@@ -144,14 +144,14 @@ $(document).ready(function() {
         triggerElement: '.resumeWrap',
         duration: 0
       })
-      .addIndicators()
+      // .addIndicators()
       .addTo(controller);
 
     var skillsIn = new ScrollMagic.Scene({
         triggerElement: '#resumeLines',
         duration: 0
       })
-      .addIndicators()
+      // .addIndicators()
       .addTo(controller);
 
     var experienceIn = new ScrollMagic.Scene({
@@ -159,7 +159,7 @@ $(document).ready(function() {
         duration: 0,
         offset: 200
       })
-      .addIndicators()
+      // .addIndicators()
       .addTo(controller);
 
     var educationIn = new ScrollMagic.Scene({
@@ -167,14 +167,14 @@ $(document).ready(function() {
         duration: 0,
         offset: 200
       })
-      .addIndicators()
+      // .addIndicators()
       .addTo(controller);
 
     function resumeStart (event) {
-        $('.theGoods').css('opacity', '0');
-        $('.individWorkWrap').css('opacity', '0');
-        $('.lineWork').css('opacity', '0');
-        $('#moreWork').css('opacity', '0');
+        // $('.theGoods').css('opacity', '0');
+        // $('.individWorkWrap').css('opacity', '0');
+        // $('.lineWork').css('opacity', '0');
+        // $('#moreWork').css('opacity', '0');
         $('.resume').css('width', '100%');
         $('.resume').css('opacity', '1');
     }
@@ -230,13 +230,13 @@ $(document).ready(function() {
 
 
     resumeEnter.on('enter', resumeStart);
-    resumeEnter.on('leave', resumeStartLeave);
+    // resumeEnter.on('leave', resumeStartLeave);
     skillsIn.on('enter', skills);
-    skillsIn.on('leave', skillsLeave);
+    // skillsIn.on('leave', skillsLeave);
     experienceIn.on('enter', experience);
-    experienceIn.on('leave', experienceLeave);
+    // experienceIn.on('leave', experienceLeave);
     educationIn.on('enter', education);
-    educationIn.on('leave', educationLeave);
+    // educationIn.on('leave', educationLeave);
 
     //////////////////////
 
@@ -244,13 +244,13 @@ $(document).ready(function() {
 
     var contactEnter = new ScrollMagic.Scene({
         triggerElement: '.contactWrap',
-        duration: 600
+        duration: '90%'
       })
-      .addIndicators()
+      // .addIndicators()
       .addTo(controller);
 
       function header(event) {
-        var a = document.getElementById('portfolioLogo');
+        var a =  document.getElementById('portfolioLogo');
         var portfolioLogo = a.contentDocument;
         var lines = portfolioLogo.getElementsByClassName('st0')
 
@@ -268,6 +268,24 @@ $(document).ready(function() {
         }
       }
 
+      function setAttributes(el, attrs) {
+        for(var key in attrs) {
+          el.setAttribute(key, attrs[key]);
+        }
+      }
+
+      function svg(event) {
+        // var a = document.getElementById('contactTitle');
+        // var contactSvg = a.contentDocument;
+        // var lines = contactSvg.getElementsByClassName('st0')
+        $('#contactTitle').css('display','inline-block');
+        $('.contacts').css('opacity','1');
+        $('.linkWrap').css('opacity','1');
+      }
+
+
+
+      contactEnter.on('enter', svg);
       contactEnter.on('progress', header);
 
     });

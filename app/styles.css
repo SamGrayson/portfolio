@@ -34,6 +34,8 @@ MIXINS
 /**************************
 SETUP
 **************************/
+@viewport {
+  orientation: portrait; }
 html {
   margin: 0;
   padding: 0;
@@ -88,7 +90,7 @@ LANDING
   z-index: 98;
   width: 100%;
   height: 100vh;
-  min-height: 800px;
+  min-height: 700px;
   background: -webkit-linear-gradient(#673AB7, #9575CD);
   background: linear-gradient(#673AB7, #9575CD);
   position: relative;
@@ -179,6 +181,61 @@ HEADER NAV
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
   top: 0; }
+  .header .dropDownWrap {
+    float: right;
+    height: 50px;
+    margin-right: 25px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .header .dropDownWrap .dropdown-menu {
+      width: 0;
+      font-size: 25px;
+      text-align: center; }
+    .header .dropDownWrap #dropDownButton {
+      color: white;
+      font-size: 1.5rem;
+      height: 40px;
+      width: 40px;
+      border: 1px solid white;
+      border-radius: 50%;
+      -webkit-transition: all .5s ease;
+      transition: all .5s ease;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .header .dropDownWrap #dropDownButton:hover {
+        cursor: pointer;
+        background-color: white;
+        color: #673AB7; }
   .header .headerWrapper {
     width: 100%;
     height: 50px;
@@ -1147,7 +1204,7 @@ RESUME
       transition: all .5s ease;
       max-width: 800px;
       height: 200px;
-      margin: 25px;
+      margin: 25px 25px 50px 25px;
       border: 1px solid #EDE7F6;
       display: -webkit-box;
       display: -webkit-flex;
@@ -1197,6 +1254,61 @@ CONTACT
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
   top: 0; }
+  .headerWhite .dropDownWrap {
+    float: right;
+    height: 50px;
+    margin-right: 25px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .headerWhite .dropDownWrap .dropdown-menu {
+      width: 0;
+      font-size: 25px;
+      text-align: center; }
+    .headerWhite .dropDownWrap #dropDownButton {
+      color: #673AB7;
+      font-size: 1.5rem;
+      height: 40px;
+      width: 40px;
+      border: 1px solid #673AB7;
+      border-radius: 50%;
+      -webkit-transition: all .5s ease;
+      transition: all .5s ease;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .headerWhite .dropDownWrap #dropDownButton:hover {
+        cursor: pointer;
+        background-color: #673AB7;
+        color: white; }
   .headerWhite .headerWrapper {
     width: 100%;
     height: 50px;
@@ -1302,8 +1414,8 @@ CONTACT
 .contactWrap {
   position: relative;
   z-index: 81;
-  width: 100%;
   height: 100vh;
+  height: 100%;
   min-height: 800px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1325,14 +1437,104 @@ CONTACT
   background: -webkit-linear-gradient(#673AB7, #9575CD);
   background: linear-gradient(#673AB7, #9575CD); }
   .contactWrap #contactTitle {
-    font-weight: bold;
-    font-size: 10rem;
-    color: #B39DDB;
-    text-shadow: 13px 0px 0px white;
-    margin: 25px; }
+    max-width: 800px;
+    display: none;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease; }
   .contactWrap .contacts {
     color: white;
-    font-size: 6rem;
+    font-size: 4em;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: flex-start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+    width: 400px;
+    height: 100px;
+    margin-bottom: 25px;
+    opacity: 0; }
+    .contactWrap .contacts .icon {
+      margin-right: 25px; }
+    .contactWrap .contacts #mail {
+      border: 1px solid white;
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .contactWrap .contacts #phone {
+      border: 1px solid white;
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .contactWrap .contacts h2 {
+      margin: 10px;
+      font-size: 2rem;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+  .contactWrap .linkWrap {
+    padding-top: 50px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1349,13 +1551,21 @@ CONTACT
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
-    align-items: center; }
-    .contactWrap .contacts h2 {
-      margin: 10px; }
+    align-items: center;
+    opacity: 0;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease; }
+    .contactWrap .linkWrap h2 {
+      color: white;
+      font-weight: lighter;
+      font-weight: bold; }
   .contactWrap .links {
     color: white;
-    font-size: 5rem;
+    font-size: 2rem;
+    height: 50px;
     margin: 5px;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1373,6 +1583,121 @@ CONTACT
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
+    .contactWrap .links a {
+      color: #EDE7F6;
+      -webkit-transition: all .5s ease;
+      transition: all .5s ease;
+      margin: 25px;
+      width: 100px; }
+    .contactWrap .links a:hover {
+      color: white;
+      cursor: pointer; }
+    .contactWrap .links a:hover p {
+      text-decoration: underline; }
+    .contactWrap .links .viewResume {
+      margin-top: 25px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .contactWrap .links .viewResume i {
+        font-size: 2.5rem;
+        height: 50px;
+        width: 50px;
+        border: 1px solid white;
+        padding-left: 1px;
+        border-radius: 50%;
+        -webkit-transition: all .5s ease;
+        transition: all .5s ease;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        .contactWrap .links .viewResume i:hover {
+          background-color: white;
+          color: #673AB7; }
+  .contactWrap .footer {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .contactWrap .footer i {
+      -webkit-transition: all .5s ease;
+      transition: all .5s ease;
+      height: 40px;
+      width: 40px;
+      margin-left: 10px;
+      font-size: 2rem;
+      margin-right: 10px;
+      border: 1px solid #673AB7;
+      color: #673AB7;
+      border-radius: 50%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .contactWrap .footer i:hover {
+      color: white;
+      border: 1px solid white;
+      background-color: #673AB7;
+      cursor: pointer; }
 
 /**************************
 IMPORTS
@@ -1397,5 +1722,102 @@ IMPORTS
     margin: 0 auto; }
   .resumeWrap .educationWrap {
     margin: 0 auto; } }
+@media screen and (max-width: 800px) {
+  .aboutPage {
+    min-height: 600px;
+    height: 600px; }
+
+  .aboutMeWrap .picture {
+    display: none; }
+  .aboutMeWrap .description {
+    padding-left: 40px; }
+
+  .continueAnimate {
+    display: none; } }
+@media screen and (max-width: 700px) {
+  .header .navButtons {
+    display: none; }
+
+  .headerWhite .navButtons {
+    display: none; }
+
+  .header .headerLogo {
+    width: 70%; }
+    .header .headerLogo object {
+      width: 25px;
+      height: 50px; } }
+@media screen and (max-width: 450px) {
+  .contentWrapper {
+    width: 100%; }
+    .contentWrapper object {
+      height: 100%;
+      width: 100%; }
+
+  #githubLand {
+    right: 5px; }
+
+  .aboutMeWrap .description {
+    width: 400px;
+    height: 100%;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0); }
+    .aboutMeWrap .description h1 {
+      color: white;
+      margin-bottom: 25px;
+      font-size: 36  px; }
+    .aboutMeWrap .description h2 {
+      font-weight: lighter;
+      font-size: 26px; }
+    .aboutMeWrap .description #passionate {
+      color: #7E57C2; }
+    .aboutMeWrap .description #creative {
+      color: #9575CD; }
+    .aboutMeWrap .description #curious {
+      color: #B39DDB; }
+    .aboutMeWrap .description p {
+      color: white;
+      font-size: 16px; }
+    .aboutMeWrap .description #reachOut {
+      margin-top: 25px; }
+    .aboutMeWrap .description #emailLink {
+      text-align: center;
+      font-size: 16px; }
+
+  .workWrap .theGoods h1 {
+    color: #AD8B32;
+    font-weight: bold;
+    font-size: 5rem; }
+
+  .resumeWrap .educationWrap .education h3 {
+    font-size: 20px; }
+
+  .contactWrap .contacts {
+    width: 100%; }
+
+  .contactWrap .contacts h2 {
+    font-size: 1.5rem; }
+
+  .contactWrap {
+    min-height: 600px; } }
 
 /*# sourceMappingURL=styles.css.map */
