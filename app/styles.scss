@@ -94,6 +94,9 @@ MIXINS
 /**************************
 SETUP
 **************************/
+@viewport {
+  orientation: portrait;
+}
 
 html {
   margin: 0;
@@ -155,7 +158,7 @@ LANDING
   z-index:98;
   width: 100%;
   height: 100vh;
-  min-height: 800px;
+  min-height: 700px;
   background: -webkit-linear-gradient($deepPurple, #9575CD);
   background: linear-gradient($deepPurple,#9575CD);
   position: relative;
@@ -202,6 +205,34 @@ HEADER NAV
   position: fixed;
   @include transition;
   top:0;
+
+  .dropDownWrap {
+    float: right;
+    height: 50px;
+    margin-right:25px;
+    @include flexbox(row,center,center);
+    .dropdown-menu {
+      width: 0;
+      font-size: 25px;
+      text-align: center;
+    }
+    #dropDownButton {
+      color: white;
+      font-size: 1.5rem;
+      height: 40px;
+      width: 40px;
+      border: 1px solid white;
+      border-radius: 50%;
+      @include transition;
+      @include flexbox(row, center, center);
+      &:hover {
+        cursor: pointer;
+        background-color: white;
+        color: $deepPurple;
+      }
+    }
+  }
+
   .headerWrapper {
     width: 100%;
     height: 50px;
@@ -765,7 +796,7 @@ RESUME
       @include transition;
       max-width: 800px;
       height: 200px;
-      margin: 25px;
+      margin: 25px 25px 50px 25px;
       border: 1px solid $whitePurple;
       @include flexbox(column, center, center);
       &:hover {
@@ -806,6 +837,33 @@ CONTACT
   position: fixed;
   @include transition;
   top:0;
+
+  .dropDownWrap {
+    float: right;
+    height: 50px;
+    margin-right:25px;
+    @include flexbox(row,center,center);
+    .dropdown-menu {
+      width: 0;
+      font-size: 25px;
+      text-align: center;
+    }
+    #dropDownButton {
+      color: $deepPurple;
+      font-size: 1.5rem;
+      height: 40px;
+      width: 40px;
+      border: 1px solid $deepPurple;
+      border-radius: 50%;
+      @include transition;
+      @include flexbox(row, center, center);
+      &:hover {
+        cursor: pointer;
+        background-color: $deepPurple;
+        color: white;
+      }
+    }
+  }
   .headerWrapper {
     width: 100%;
     height: 50px;
@@ -874,34 +932,128 @@ CONTACT
 .contactWrap {
   position: relative;
   z-index:81;
-  width: 100%;
   height: 100vh;
+  height: 100%;
   min-height: 800px;
   @include flexbox(column, center, center);
   background: -webkit-linear-gradient($deepPurple, #9575CD);
   background: linear-gradient($deepPurple,#9575CD);
   #contactTitle {
-    font-weight: bold;
-    font-size: 10rem;
-    color: #B39DDB;
-    text-shadow: 13px 0px 0px white;
-    margin: 25px;
+    max-width: 800px;
+    display: none;
+    @include transition;
   }
   .contacts {
     color: white;
-    font-size: 6rem;
-    @include flexbox(column, center, center);
+    font-size: 4em;
+    @include transition;
+    @include flexbox(column, flex-start, flex-start);
+    width: 400px;
+    height: 100px;
+    margin-bottom: 25px;
+    opacity: 0;
+    .icon {
+      margin-right: 25px;
+    }
+
+    #mail {
+      border: 1px solid white;
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+      @include flexbox(row, center, center);
+    }
+    #phone {
+      border: 1px solid white;
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+      @include flexbox(row, center, center);
+    }
     h2 {
       margin: 10px;
+      font-size: 2rem;
+      @include flexbox(row, center, center);
+    }
+  }
+  .linkWrap {
+    padding-top: 50px;
+    @include flexbox(column, center, center);
+    opacity: 0;
+    @include transition;
+    h2 {
+      color: white;
+      font-weight: lighter;
+      font-weight: bold;
     }
   }
   .links {
     color: white;
-    font-size: 5rem;
+    font-size: 2rem;
+    height: 50px;
     margin: 5px;
+    @include transition;
     @include flexbox(row, center, center);
+    a {
+      color: $whitePurple;
+      @include transition;
+      margin: 25px;
+      width: 100px;
+    }
+    a:hover {
+      color: white;
+      cursor: pointer;
+    }
+    a:hover p {
+      text-decoration: underline;
+    }
+    .viewResume {
+      margin-top: 25px;
+      @include flexbox(column,center,center);
+      i {
+        font-size: 2.5rem;
+        height: 50px;
+        width: 50px;
+        border: 1px solid white;
+        padding-left: 1px;
+        border-radius: 50%;
+        @include transition;
+        @include flexbox(row, center, center);
+        &:hover {
+          background-color: white;
+          color:$deepPurple;
+        }
+      }
+    }
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    @include flexbox(row, center, center);
+    i {
+      @include transition;
+      height: 40px;
+      width: 40px;
+      margin-left: 10px;
+      font-size: 2rem;
+      margin-right: 10px;
+      border: 1px solid $deepPurple;
+      color: $deepPurple;
+      border-radius: 50%;
+      @include flexbox(row, center, center);
+    }
+    i:hover {
+      color: white;
+      border: 1px solid white;
+      background-color: $deepPurple;
+      cursor: pointer;
+    }
   }
 }
+
 
 /**************************
 IMPORTS

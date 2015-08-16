@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Sam Grayson</title>
+  <meta name="viewport" content="width=device-width, maximum-scale=1">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,300italic' rel='stylesheet' type='text/css'>
@@ -39,6 +40,18 @@
         <a href=""><button>resume</button></a>
         <a href=""><button>contact</button></a>
         <a href="https://github.com/SamGrayson" target="_blank" id="githubNav"><i class="fa fa-github"></i></a>
+      </div>
+      <div class="dropDownWrap">
+        <div class="dropdown">
+           <i id="dropDownButton" class="fa fa-bars"class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            </i>
+          <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+            <li><a href="#">about</a></li>
+            <li><a href="#">work</a></li>
+            <li><a href="#">resume</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -263,17 +276,25 @@
 <!-- Contact -->
 
 <div class="contactWrap">
-  <h1 id="contactTitle">
-    CONTACT
-  </h1>
+  <object id="contactTitle" data="media/contact.svg" type="image/svg+xml">
+    <img id="svgLandFallback" src="media/contact.png" />
+  </object>
   <div class="contacts">
-    <h2>@: samuel.c.grayson17@gmail.com</h2>
-    <h2>#: 678-294-8443</h2>
+    <h2><i id="mail" class="fa fa-envelope icon"></i> samuel.c.grayson17@gmail.com</h2>
+    <h2><i id="phone" class="fa fa-phone icon"></i> 678 - 294 - 8443</h2>
   </div>
-  <div class="links">
-    <h3>
-      resume:
-    </h3>
+  <div class="linkWrap">
+    <h2>RESUME</h2>
+    <div class="links">
+      <a href="" class="resumelink"><div class="viewResume">
+        <i class="fa fa-file-text-o"></i>
+      </div></a>
+    </div>
+  </div>
+  <div class="footer">
+    <i class="fa fa-instagram"></i>
+    <i class="fa fa-linkedin"></i>
+    <i class="fa fa-github"></i>
   </div>
 </div>
 
