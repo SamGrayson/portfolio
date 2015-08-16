@@ -750,9 +750,8 @@ WORK
         -webkit-transition: all .25s ease;
         transition: all .25s ease; }
       .workWrap .individWorkWrap .works .description {
-        height: 200px;
-        width: 90%;
-        margin-top: 25px; }
+        height: 300px;
+        width: 90%; }
         .workWrap .individWorkWrap .works .description h2 {
           font-weight: bold;
           height: 60px;
@@ -1750,6 +1749,9 @@ IMPORTS
     display: none; }
 
   .header .dropDownWrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex; }
   .header .headerLogo {
     width: 70%; }
@@ -1769,6 +1771,7 @@ IMPORTS
   .aboutMeWrap .description {
     width: 400px;
     height: 100%;
+    padding-left: 25px;
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
     display: -webkit-box;

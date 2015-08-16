@@ -65,7 +65,7 @@
  }
 .header {
   .dropDownWrap {
-    display: flex;
+    display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;
   }
   .headerLogo {
     width: 70%;
@@ -93,6 +93,7 @@
     .description {
       width: 400px;
       height: 100%;
+      padding-left: 25px;
       @include transition;
       @include flexbox(column, center, flex-start);
       -webkit-transform: scaleY(0);
