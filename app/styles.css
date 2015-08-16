@@ -1855,7 +1855,6 @@ IMPORTS
     width: 100%; }
 
   .landingWrapper {
-    min-height: 525px;
-    height: 40vh; } }
+    display: none; } }
 
 /*# sourceMappingURL=styles.css.map */
