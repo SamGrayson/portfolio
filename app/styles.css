@@ -706,7 +706,7 @@ WORK
       margin-right: 25px;
       margin-top: 25px;
       width: 300px;
-      height: 500px;
+      height: 520px;
       -webkit-transform: translateY(1000px);
       -ms-transform: translateY(1000px);
       transform: translateY(1000px);
@@ -751,7 +751,8 @@ WORK
         transition: all .25s ease; }
       .workWrap .individWorkWrap .works .description {
         height: 300px;
-        width: 90%; }
+        width: 90%;
+        margin-top: 25px; }
         .workWrap .individWorkWrap .works .description h2 {
           font-weight: bold;
           height: 60px;

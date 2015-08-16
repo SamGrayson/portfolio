@@ -534,7 +534,7 @@ WORK
       margin-right: 25px;
       margin-top: 25px;
       width: 300px;
-      height: 500px;
+      height: 520px;
       -webkit-transform: translateY(1000px);
           -ms-transform: translateY(1000px);
               transform: translateY(1000px);
@@ -563,6 +563,8 @@ WORK
       .description {
         height: 300px;
         width: 90%;
+        margin-top: 25px;
+
         h2 {
           font-weight: bold;
           height: 60px;
