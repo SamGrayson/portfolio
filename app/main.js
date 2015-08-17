@@ -311,7 +311,12 @@ $(document).ready(function() {
   **************************/
 
   $('.dropdown').on('click', function() {
-    console.log('hi');
     $('.dropdownmenu').toggleClass('hidden');
   })
+  $('.dropdownmenu').on('click', function() {
+    if ($('.dropdownmenu').hasClass('hidden')){
+      $('.dropdownmenu').addClass('hidden');
+    }
+  })
+
 });
