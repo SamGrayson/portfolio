@@ -266,6 +266,10 @@ HEADER NAV
         background-color: white;
         color: $deepPurple;
       }
+      &:focus, &:active, &:visited {
+        color: white;
+        background-color: none;
+      }
     }
   }
 

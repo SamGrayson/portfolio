@@ -282,6 +282,9 @@ HEADER NAV
         cursor: pointer;
         background-color: white;
         color: #673AB7; }
+      .header .dropDownWrap #dropDownButton:focus, .header .dropDownWrap #dropDownButton:active, .header .dropDownWrap #dropDownButton:visited {
+        color: white;
+        background-color: none; }
   .header .headerWrapper {
     width: 100%;
     height: 50px;
