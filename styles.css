@@ -149,6 +149,8 @@ LANDING
     animation: fadeIn 1s ease 2.5s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards; }
+  .landingWrapper a {
+    color: inherit; }
 
 .contentWrapper {
   width: 80%;
@@ -617,6 +619,9 @@ ABOUT PAGE
   position: fixed;
   bottom: 10px; }
   .continueAnimate #continue {
+    width: 250px;
+    opacity: 0;
+    margin: 0 auto;
     opacity: 0;
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
