@@ -310,7 +310,7 @@ $(document).ready(function() {
   DROPDOWN
   **************************/
 
-  $('#dropDownButton').on('click', function() {
+  $('.dropdown').on('click', function() {
     console.log('hi');
     $('.dropdownmenu').toggleClass('hidden');
   })
