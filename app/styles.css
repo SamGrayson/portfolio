@@ -34,9 +34,6 @@ MIXINS
 /**************************
 SETUP
 **************************/
-.dropdown-backdrop {
-  position: static; }
-
 @-ms-viewport {
   orientation: portrait; }
 @-o-viewport {
@@ -70,6 +67,9 @@ a:hover {
   text-decoration: none;
   -webkit-transition: all .25s ease;
   transition: all .25s ease; }
+
+*:focus {
+  outline: none; }
 
 /**************************
 LANDING
@@ -214,6 +214,8 @@ HEADER NAV
       width: 0;
       font-size: 25px;
       text-align: center; }
+      .header .dropDownWrap .dropdown-menu .dropdown-backdrop {
+        position: static; }
     .header .dropDownWrap #dropDownButton {
       color: white;
       font-size: 1.5rem;
@@ -709,7 +711,7 @@ WORK
       margin-right: 25px;
       margin-top: 25px;
       width: 300px;
-      height: 520px;
+      height: 510px;
       -webkit-transform: translateY(1000px);
       -ms-transform: translateY(1000px);
       transform: translateY(1000px);
@@ -1681,8 +1683,8 @@ CONTACT
     .contactWrap .footer i {
       -webkit-transition: all .5s ease;
       transition: all .5s ease;
-      height: 40px;
-      width: 40px;
+      height: 35px;
+      width: 35px;
       margin-left: 10px;
       font-size: 2rem;
       margin-right: 10px;
@@ -1858,6 +1860,12 @@ IMPORTS
     width: 100%; }
 
   .landingWrapper {
-    display: none; } }
+    display: none; }
+
+  .header .headerLogo object {
+    margin-left: 5px; }
+
+  .header .dropDownWrap {
+    margin-right: 5px; } }
 
 /*# sourceMappingURL=styles.css.map */

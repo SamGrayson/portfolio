@@ -291,14 +291,19 @@ $(document).ready(function() {
     });
 
   /**************************
-  OTHER SHTUFF
+  SMOOVE SCROLL BABY
   **************************/
 
-  // $('#profpic').on('mouseenter', function(){
-  //     $('#profpic').attr('src', "media/lacrosse.jpg");
-  // })
-  // $('#profpic').on('mouseleave', function(){
-  //     $('#profpic').attr('src', "media/profpic.jpg");
-  // })
+  $('a[href^="#"]').on('click', function(event){
+
+    var target = this.hash;
+    var $target = $(target);
+
+    event.preventDefault();
+
+      $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+      }, 1000, 'swing');
+  });
 
 });

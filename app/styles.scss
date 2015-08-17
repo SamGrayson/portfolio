@@ -94,9 +94,7 @@ MIXINS
 /**************************
 SETUP
 **************************/
-.dropdown-backdrop {
-    position: static;
-}
+
 
 @-ms-viewport {
   orientation: portrait;
@@ -139,7 +137,9 @@ a:hover {
   text-decoration: none;
   @include transitionHover;
 }
-
+*:focus {
+  outline: none;
+}
 /**************************
 LANDING
 **************************/
@@ -226,6 +226,9 @@ HEADER NAV
       width: 0;
       font-size: 25px;
       text-align: center;
+      .dropdown-backdrop {
+          position: static;
+      }
     }
     #dropDownButton {
       color: white;
@@ -538,7 +541,7 @@ WORK
       margin-right: 25px;
       margin-top: 25px;
       width: 300px;
-      height: 520px;
+      height: 510px;
       -webkit-transform: translateY(1000px);
           -ms-transform: translateY(1000px);
               transform: translateY(1000px);
@@ -1054,8 +1057,8 @@ CONTACT
     @include flexbox(row, center, center);
     i {
       @include transition;
-      height: 40px;
-      width: 40px;
+      height: 35px;
+      width: 35px;
       margin-left: 10px;
       font-size: 2rem;
       margin-right: 10px;
