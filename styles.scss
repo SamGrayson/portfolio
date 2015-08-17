@@ -1061,6 +1061,9 @@ CONTACT
     a:hover p {
       text-decoration: underline;
     }
+    a:visited {
+      text-decoration: none;
+    }
     .viewResume {
       margin-top: 25px;
       @include flexbox(column,center,center);
@@ -1104,6 +1107,9 @@ CONTACT
       border: 1px solid white;
       background-color: $deepPurple;
       cursor: pointer;
+    }
+    a:visited {
+      text-decoration: none;
     }
   }
 }

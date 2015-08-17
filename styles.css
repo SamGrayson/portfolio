@@ -1653,6 +1653,8 @@ CONTACT
       cursor: pointer; }
     .contactWrap .links a:hover p {
       text-decoration: underline; }
+    .contactWrap .links a:visited {
+      text-decoration: none; }
     .contactWrap .links .viewResume {
       margin-top: 25px;
       display: -webkit-box;
@@ -1757,6 +1759,8 @@ CONTACT
       border: 1px solid white;
       background-color: #673AB7;
       cursor: pointer; }
+    .contactWrap .footer a:visited {
+      text-decoration: none; }
 
 .hidden {
   display: none; }
