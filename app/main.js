@@ -310,4 +310,8 @@ $(document).ready(function() {
   DROPDOWN
   **************************/
 
+  $('#dropDownButton').on('click', function() {
+    console.log('hi');
+    $('.dropdownmenu').toggleClass('hidden');
+  })
 });

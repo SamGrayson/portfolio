@@ -210,14 +210,48 @@ HEADER NAV
     -ms-flex-align: center;
     align-items: center;
     display: none; }
-    .header .dropDownWrap .dropdown-menu {
+    .header .dropDownWrap .dropdownmenu {
+      position: absolute;
       width: 0;
       font-size: 25px;
-      top: 50px;
+      top: 52px;
       right: 2px;
-      text-align: center; }
-      .header .dropDownWrap .dropdown-menu .dropdown-backdrop {
-        position: static; }
+      width: 200px;
+      padding: 0;
+      background-color: white;
+      text-align: center;
+      border-radius: 5%;
+      text-decoration: none;
+      list-style: none;
+      -webkit-transition: all .5s ease;
+      transition: all .5s ease;
+      box-shadow: 0px 0px 1px .5px black;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .header .dropDownWrap .dropdownmenu li {
+        border-bottom: 1px solid lightgray;
+        width: 80%; }
+      .header .dropDownWrap .dropdownmenu .bottomLink {
+        border-bottom: none; }
+      .header .dropDownWrap .dropdownmenu a:hover {
+        color: #673AB7; }
+      .header .dropDownWrap .dropdownmenu a:active, .header .dropDownWrap .dropdownmenu a:visited, .header .dropDownWrap .dropdownmenu a:focus {
+        text-decoration: none; }
     .header .dropDownWrap #dropDownButton {
       color: white;
       font-size: 1.5rem;
@@ -1715,6 +1749,9 @@ CONTACT
       border: 1px solid white;
       background-color: #673AB7;
       cursor: pointer; }
+
+.hidden {
+  display: none; }
 
 /**************************
 IMPORTS
