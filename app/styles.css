@@ -213,6 +213,8 @@ HEADER NAV
     .header .dropDownWrap .dropdown-menu {
       width: 0;
       font-size: 25px;
+      top: 50px;
+      right: 2px;
       text-align: center; }
       .header .dropDownWrap .dropdown-menu .dropdown-backdrop {
         position: static; }
