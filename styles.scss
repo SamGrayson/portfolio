@@ -982,6 +982,7 @@ CONTACT
   z-index:81;
   height: 100vh;
   height: 100%;
+  width:100%;
   min-height: 800px;
   @include flexbox(column, center, center);
   background: -webkit-linear-gradient($deepPurple, #9575CD);
