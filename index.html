@@ -18,9 +18,17 @@
   <!-- Landing Content -->
   <div class="landingWrapper">
     <div class="contentWrapper">
-      <object id="compSvg" data="media/portfoliolandingimg.svg" type="image/svg+xml">
-        <img id="svgLandFallback" src="media/portfoliolandingimg.png" />
-      </object>
+        <object id="compSvg" data="media/portfoliolandingimg.svg" type="image/svg+xml">
+          <img id="svgLandFallback" src="media/portfoliolandingimg.png" />
+        </object>
+        <!--[if IE]>
+          <img id="svgLandFallback" src="media/portfoliolandingimg.png" />
+          <style>
+              #compSvg {
+                   display: none;
+              }
+          </style>
+        <![endif]-->
     </div>
     <div class="arrowDown">
       <a href="#about"><i class="fa fa-angle-down"></i></a>

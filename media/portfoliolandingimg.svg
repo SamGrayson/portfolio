@@ -105,16 +105,6 @@
 			opacity: 1;
 		}
 	}
-	<!--[if IE]>
-			<style>
-		    .st4, .st7, .st6 {
-				-webkit-animation: fadeIn 1.8s linear 1s;
-								animation: fadeIn 1.8s linear 1s;
-				-webkit-animation-fill-mode: forwards;
-								animation-fill-mode: forwards;
-				}
-			</style>
-		<![endif]-->
 	]]>
 </style>
 <text transform="matrix(0.9143 0 0 1 74.1911 267.0312)" class="st0 st1">Samuel Grayson</text>
