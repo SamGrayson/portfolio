@@ -38,12 +38,6 @@
 	}
 	.st4{
 	stroke:#FFFFFF;stroke-width:0.5;stroke-miterlimit:10;
-	stroke-dasharray: 1000;
-	stroke-dashoffset: 1000;
-	-webkit-animation: fadeIn 3s linear 1.8s;
-	        animation: fadeIn 3s linear 1.8s;
-	-webkit-animation-fill-mode: forwards;
-	        animation-fill-mode: forwards;
 	}
 	.st5{
 		fill:#FFFFFF;stroke:none;font-size:6px;
@@ -56,22 +50,10 @@
 	.st7{
 		fill:none;stroke:#FFFFFF;stroke-miterlimit:10;
 		stroke-width: 0.5;
-		stroke-dasharray: 2000;
-		stroke-dashoffset: 2000;
-		-webkit-animation: fadeIn 1.8s linear;
-		        animation: fadeIn 1.8s linear;
-		-webkit-animation-fill-mode: forwards;
-		        animation-fill-mode: forwards;
 	}
 	.st6
 	{
 		fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-miterlimit:10;
-		stroke-dasharray: 870;
-		stroke-dashoffset: 870;
-		-webkit-animation: fadeIn 3s linear;
-		        animation: fadeIn 3s linear;
-		-webkit-animation-fill-mode: forwards;
-		        animation-fill-mode: forwards;
 	}
 	@-webkit-keyframes draw {
 		 to {
