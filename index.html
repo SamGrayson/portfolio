@@ -291,7 +291,10 @@
 <!-- Contact -->
 
 <div class="contactWrap" id="contact">
-  <object id="contactTitle" data="media/contact.svg" type="image/svg+xml">
+  <object class="normalSvg" id="contactTitle" data="media/contact.svg" type="image/svg+xml">
+    <img id="svgLandFallback" src="media/contact.png" />
+  </object>
+  <object class="ieSvg" id="contactTitle" data="media/contactie.svg" type="image/svg+xml">
     <img id="svgLandFallback" src="media/contact.png" />
   </object>
   <div class="contacts">
