@@ -18,7 +18,10 @@
   <!-- Landing Content -->
   <div class="landingWrapper">
     <div class="contentWrapper">
-        <object id="compSvg" data="media/portfoliolandingimg.svg" type="image/svg+xml">
+        <object class="normalSvg" id="compSvg" data="media/portfoliolandingimg.svg" type="image/svg+xml">
+          <img id="svgLandFallback" src="media/portfoliolandingimg.png" />
+        </object>
+        <object class="ieSvg" id="compSvg" data="media/portfoliolandingimgie.svg" type="image/svg+xml">
           <img id="svgLandFallback" src="media/portfoliolandingimg.png" />
         </object>
         <!--[if IE]>

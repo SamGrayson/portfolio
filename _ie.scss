@@ -1,0 +1,13 @@
+
+/**************************
+IE
+**************************/
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .normalSvg {
+    display: none;
+  }
+  .ieSvg {
+    display: block;
+  }
+}

@@ -1471,6 +1471,7 @@ CONTACT
   z-index: 81;
   height: 100vh;
   height: 100%;
+  width: 100%;
   min-height: 800px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1706,6 +1707,7 @@ CONTACT
   .contactWrap .footer {
     position: absolute;
     bottom: 0;
+    left: 0;
     height: 50px;
     width: 100%;
     background-color: white;
@@ -1763,6 +1765,9 @@ CONTACT
       text-decoration: none; }
 
 .hidden {
+  display: none; }
+
+.ieSvg {
   display: none; }
 
 /**************************
@@ -1918,5 +1923,14 @@ IMPORTS
 
   .header .dropDownWrap {
     margin-right: 5px; } }
+/**************************
+IE
+**************************/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .normalSvg {
+    display: none; }
+
+  .ieSvg {
+    display: block; } }
 
 /*# sourceMappingURL=styles.css.map */

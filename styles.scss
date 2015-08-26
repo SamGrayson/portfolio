@@ -1087,6 +1087,7 @@ CONTACT
   .footer {
     position: absolute;
     bottom: 0;
+    left: 0;
     height: 50px;
     width: 100%;
     background-color: white;
@@ -1119,9 +1120,14 @@ CONTACT
   display: none;
 }
 
+.ieSvg {
+  display: none;
+}
+
 
 /**************************
 IMPORTS
 **************************/
 
-@import 'queries'
+@import 'queries';
+@import 'ie';
