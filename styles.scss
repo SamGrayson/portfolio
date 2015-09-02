@@ -111,12 +111,16 @@ html {
   padding: 0;
   height: 100%;
   width: 100%;
+  max-width: 100vw;
+  position: relative;
 }
 
 body {
   height: 100%;
   width: 100%;
+  max-width: 100vw;
   background: url('media/stardust.png');
+  position: relative;
 }
 
 p, h1, h2, h3, h4, h5, a, li {
@@ -174,12 +178,14 @@ LANDING
   position: relative;
   @include flexbox(column, center, center);
   .arrowDown {
+    z-index:99;
     position: absolute;
     width: 100%;
     @include flexbox(column, center, center);
     color: white;
     font-size: 35px;
     bottom: 1%;
+    left: 0px;
     -webkit-animation: arrow 3s infinite ease-in;  animation: arrow 3s infinite ease-in;
   }
   i {
