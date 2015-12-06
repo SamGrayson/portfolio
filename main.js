@@ -256,6 +256,8 @@ $(document).ready(function() {
 
         var headerOffset = $('.header').offset();
         var contactOffset = $('.contactWrap').offset();
+        console.log(headerOffset)
+        console.log(contactOffset)
 
         if (headerOffset.top >= contactOffset.top) {
           $("#headerToggle").addClass("headerWhite");

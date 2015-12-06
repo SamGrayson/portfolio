@@ -817,6 +817,9 @@ RESUME
           margin: 10px;
           list-style-position: outside;
           text-indent: -1em;
+          a:active {
+            text-decoration: none;
+          }
         }
       }
     }
